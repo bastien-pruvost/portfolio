@@ -1,8 +1,8 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'category',
-  title: 'Category',
+  name: 'techno',
+  title: 'Téchnologies',
   type: 'document',
   fields: [
     defineField({
