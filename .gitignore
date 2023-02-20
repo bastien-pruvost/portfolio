@@ -9,7 +9,7 @@
 /coverage
 
 # VSCode
-# /.vscode/
+/.vscode/
 
 # sanity
 /.sanity/
