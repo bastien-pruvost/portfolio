@@ -34,7 +34,7 @@ export default defineType({
     }),
     defineField({
       name: 'technos',
-      title: 'Téchnologies maitrisées',
+      title: 'Technologies maitrisées',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'techno' } }],
       validation: (rule) => rule.required().error('Champ requis'),
