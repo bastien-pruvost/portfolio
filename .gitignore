@@ -8,6 +8,12 @@
 # testing
 /coverage
 
+# VSCode
+# /.vscode/
+
+# sanity
+/.sanity/
+
 # next.js
 /.next/
 /out/

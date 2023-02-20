@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'projects',
+  name: 'project',
   title: 'Projets',
   type: 'document',
   fields: [
@@ -9,16 +9,26 @@ export default defineType({
       name: 'title',
       title: 'Titre',
       type: 'string',
+      validation: (rule) =>
+        rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
     }),
     defineField({
       name: 'slug',
-      title: 'Slug',
+      title: 'Slug URL',
       type: 'slug',
+      validation: (rule) => rule.required().error(`Champ requis au format "slug-url"`),
       options: {
         source: 'title',
         maxLength: 96,
       },
     }),
+    // defineField({
+    //   name: 'name',
+    //   title: 'Nom DB',
+    //   type: 'string',
+    //   validation: (rule) =>
+    //     rule.required().min(1).max(60).error('Min 1 charactères, Max 60 charactères'),
+    // }),
     defineField({
       name: 'mainImage',
       title: 'Image Principale',
@@ -26,22 +36,46 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
       name: 'technos',
       title: 'Technos utilisées',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'techno' } }],
+      validation: (rule) => rule.required().error('Champ requis'),
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'blockContent',
+      validation: (rule) =>
+        rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
     }),
     defineField({
       name: 'publishedAt',
-      title: 'Published at',
+      title: 'Date de création du site',
       type: 'date',
+      validation: (rule) =>
+        rule.required().max(new Date().toJSON()).error(`Doit être avant à la date d'aujourd'hui`),
     }),
     defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      name: 'githubLink',
+      title: 'Lien github',
+      type: 'url',
+      validation: (rule) => rule.error('Doit être une URL'),
+    }),
+    defineField({
+      name: 'websiteLink',
+      title: 'Lien du site',
+      type: 'url',
+      validation: (rule) => rule.error('Doit être une URL'),
+    }),
+    defineField({
+      name: 'priority',
+      title: `Priorité d'affichage`,
+      type: 'number',
+      validation: (rule) => rule.required().min(1).error('Doit être suppérieur à 1'),
     }),
   ],
 

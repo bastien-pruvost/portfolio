@@ -1,6 +1,6 @@
-import project from './project'
 import techno from './techno'
+import project from './project'
+import pageInfo from './pageInfo'
 import blockContent from './blockContent'
-import author from './author'
 
-export const schemaTypes = [project, techno, blockContent, author]
+export const schemaTypes = [pageInfo, project, techno, blockContent]
