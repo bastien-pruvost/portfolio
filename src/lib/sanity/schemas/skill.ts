@@ -19,20 +19,6 @@ export default defineType({
       validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
-      name: 'descriptionBis',
-      title: 'Description (Array of blocks)',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: [],
-        },
-      ],
-      validation: (rule) => rule.required().error('Champ requis'),
-    }),
-    defineField({
       name: 'technos',
       title: 'Technologies maitrisées',
       type: 'array',

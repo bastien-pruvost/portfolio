@@ -4,7 +4,9 @@ import { NextStudio } from 'next-sanity/studio'
 
 import config from '@/root/sanity.config'
 
-export default function StudioPage() {
+const StudioPage = () => {
   //  Supports the same props as `import {Studio} from 'sanity'`, `config` is required
   return <NextStudio config={config} />
 }
+
+export default StudioPage

@@ -1,13 +1,13 @@
 import { createClient } from 'next-sanity'
 import { cache } from 'react'
 
-import { sanityProjectId, sanityDataset, sanityApiVersion } from '@/root/sanity.config'
+export const config = {
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? 'undefined',
+  useCdn: process.env.NODE_ENV === 'production',
+  apiVersion: '2022-11-15',
+}
 
-export const client = createClient({
-  projectId: sanityProjectId,
-  dataset: sanityDataset,
-  apiVersion: sanityApiVersion,
-  useCdn: false,
-})
+export const sanityClient = createClient(config)
 
-export const clientFetch = cache(client.fetch.bind(client))
+export const sanityClientFetch = cache(sanityClient.fetch.bind(sanityClient))
