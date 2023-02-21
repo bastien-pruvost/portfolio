@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineType, defineField, defineArrayMember } from 'sanity'
 
 export default defineType({
   name: 'pageInfo',
@@ -53,12 +53,12 @@ export default defineType({
       title: 'Bio',
       type: 'array',
       of: [
-        {
+        defineArrayMember({
           title: 'Block',
           type: 'block',
           styles: [{ title: 'Normal', value: 'normal' }],
           lists: [],
-        },
+        }),
       ],
       validation: (rule) => rule.required().error('Champ requis'),
     }),

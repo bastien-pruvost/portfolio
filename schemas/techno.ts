@@ -2,37 +2,36 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'techno',
-  title: 'Technologies utilisées',
+  title: 'Technologies',
   type: 'document',
   fields: [
     defineField({
-      name: 'label',
-      title: 'Label à afficher',
+      name: 'title',
+      title: 'Nom de la techno',
       type: 'string',
       validation: (rule) =>
         rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
     }),
-    // defineField({
-    //   name: 'name',
-    //   title: 'Nom DB',
-    //   type: 'string',
-    //   validation: (rule) =>
-    //     rule.required().min(1).max(60).error('Min 1 charactères, Max 60 charactères'),
-    // }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'blockContent',
+      name: 'category',
+      title: 'Catégorie de la techno',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'JS / TS', value: 'jsts' },
+          { title: 'Front End', value: 'frontend' },
+          { title: 'Back End', value: 'backend' },
+          { title: 'Bases de données', value: 'database' },
+          { title: 'Outils', value: 'tool' },
+        ],
+      },
       validation: (rule) =>
         rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
     }),
     defineField({
-      name: 'logo',
-      title: 'Logo',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'iconName',
+      title: `Nom de l'icone (DevIcon)`,
+      type: 'string',
       validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
@@ -42,4 +41,9 @@ export default defineType({
       validation: (rule) => rule.required().min(1).error('Doit être suppérieur à 1'),
     }),
   ],
+  preview: {
+    select: {
+      title: 'title',
+    },
+  },
 })

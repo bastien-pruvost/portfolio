@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'pageInfo',
-  title: 'Informations de la page',
+  name: 'journeyEducation',
+  title: 'Formations (désactivé)',
   type: 'document',
   fields: [
     defineField({

@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType, defineArrayMember } from 'sanity'
 
 export default defineType({
   name: 'project',
@@ -7,7 +7,7 @@ export default defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Titre',
+      title: 'Nom du projet',
       type: 'string',
       validation: (rule) =>
         rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
@@ -22,13 +22,6 @@ export default defineType({
         maxLength: 96,
       },
     }),
-    // defineField({
-    //   name: 'name',
-    //   title: 'Nom DB',
-    //   type: 'string',
-    //   validation: (rule) =>
-    //     rule.required().min(1).max(60).error('Min 1 charactères, Max 60 charactères'),
-    // }),
     defineField({
       name: 'mainImage',
       title: 'Image Principale',
@@ -42,7 +35,7 @@ export default defineType({
       name: 'technos',
       title: 'Technos utilisées',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'techno' } }],
+      of: [defineArrayMember({ type: 'reference', to: { type: 'techno' } })],
       validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({

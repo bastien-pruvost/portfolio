@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'pageInfo',
-  title: 'Informations de la page',
+  name: 'social',
+  title: 'Réseaux sociaux',
   type: 'document',
   fields: [
     defineField({

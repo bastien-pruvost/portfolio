@@ -1,13 +1,13 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'pageInfo',
-  title: 'Informations de la page',
+  name: 'skill',
+  title: 'Compétences',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Titre',
+      title: 'Nom de la compétence',
       type: 'string',
       validation: (rule) =>
         rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
