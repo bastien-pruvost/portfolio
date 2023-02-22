@@ -22,7 +22,7 @@ export default defineType({
           { title: 'Front End', value: 'frontend' },
           { title: 'Back End', value: 'backend' },
           { title: 'Bases de données', value: 'database' },
-          { title: 'Outils', value: 'tool' },
+          { title: 'Autres outils', value: 'other' },
         ],
       },
       validation: (rule) =>

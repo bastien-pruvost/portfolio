@@ -55,6 +55,13 @@ export default defineType({
       validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
+      name: 'socials',
+      title: 'Réseaux sociaux',
+      type: 'array',
+      of: [defineArrayMember({ type: 'reference', to: { type: 'social' } })],
+      validation: (rule) => rule.required().error('Champ requis'),
+    }),
+    defineField({
       name: 'profileTitle',
       title: 'Titre de la partie "Profil"',
       type: 'string',
