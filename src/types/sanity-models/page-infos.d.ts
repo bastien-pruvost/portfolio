@@ -2,6 +2,7 @@ import type { SanityDocument, ImageAsset, PortableTextBlock } from '@sanity/type
 import type { Social } from './social'
 
 export type PageInfos = SanityDocument & {
+  _type: 'pageInfos'
   profilePic: ImageAsset
   fullName: string
   job: string

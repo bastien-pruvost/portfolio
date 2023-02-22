@@ -2,6 +2,7 @@ import type { SanityDocument, ImageAsset, PortableTextBlock, Slug } from '@sanit
 import type { Techno } from './techno'
 
 export type Project = SanityDocument & {
+  _type: 'project'
   title: string
   slug: Slug
   mainImage: ImageAsset
