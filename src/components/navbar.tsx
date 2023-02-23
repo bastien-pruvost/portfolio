@@ -1,5 +1,5 @@
 import React from 'react'
 
 export const Navbar = () => {
-  return <div>NavBar</div>
+  return <div>{/* <p>Navbar</p> */}</div>
 }
