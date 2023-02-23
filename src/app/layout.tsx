@@ -1,5 +1,3 @@
-import { redirect } from 'next/navigation'
-
 import '@/assets/styles/globals.css'
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
