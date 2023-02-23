@@ -1,9 +1,10 @@
 import { groq } from 'next-sanity'
 
-export const pageInfosQuery = groq`
-  *[_type == "pageInfos"][0] {
+export const pageDetailsQuery = groq`
+  *[_type == "pageDetails"][0] {
     ...,
     "profilePic": profilePic.asset->,
     socials[]->,
+    hobbies[]->,
   }
 `

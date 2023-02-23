@@ -1,5 +1,5 @@
 import type { SanityDocument, ImageAsset, PortableTextBlock, Slug } from '@sanity/types'
-import type { Techno } from './techno'
+import type { Techno } from '@/types/sanity-models/techno'
 
 export type Project = SanityDocument & {
   _type: 'project'

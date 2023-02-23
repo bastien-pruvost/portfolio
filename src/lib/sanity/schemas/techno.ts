@@ -30,7 +30,7 @@ export default defineType({
     }),
     defineField({
       name: 'iconName',
-      title: `Nom de l'icone (DevIcon)`,
+      title: `Nom de l'icone (dossier icons/dev-icons)`,
       type: 'string',
       validation: (rule) => rule.required().error('Champ requis'),
     }),

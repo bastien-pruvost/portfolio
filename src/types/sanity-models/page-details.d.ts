@@ -1,16 +1,18 @@
 import type { SanityDocument, ImageAsset, PortableTextBlock } from '@sanity/types'
-import type { Social } from './social'
+import type { Social } from '@/types/sanity-models/social'
+import type { Hobbie } from '@/types/sanity-models/hobbie'
 
-export type PageInfos = SanityDocument & {
-  _type: 'pageInfos'
+export type PageDetails = SanityDocument & {
+  _type: 'pageDetails'
   profilePic: ImageAsset
   fullName: string
   job: string
   city: string
   birthDate: Date
   email: string
-  bio: PortableTextBlock[]
-  socials: Social[]
+  bio: Array<PortableTextBlock>
+  hobbies: Array<Hobbie>
+  socials: Array<Social>
   profileTitle: string
   profileSubTitle: string
   projectsTitle: string

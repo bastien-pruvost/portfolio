@@ -9,13 +9,13 @@ const particlesOptions = {
   autoPlay: true,
   background: {
     color: {
-      value: '#121417',
+      value: '#13161a',
     },
     image: '',
     position: '',
     repeat: '',
     size: '',
-    opacity: 1,
+    opacity: 100,
   },
   defaultThemes: {},
   delay: 0,
@@ -25,7 +25,7 @@ const particlesOptions = {
   },
   detectRetina: true,
   duration: 0,
-  fpsLimit: 120,
+  fpsLimit: 60,
   interactivity: {
     detectsOn: 'window',
     events: {
@@ -35,7 +35,7 @@ const particlesOptions = {
       },
       onDiv: {
         selectors: ['.particlesBorder'],
-        enable: true,
+        enable: false,
         mode: 'bounce',
         type: 'rectangle',
       },
@@ -63,7 +63,7 @@ const particlesOptions = {
         speed: 1,
       },
       bounce: {
-        distance: 200,
+        distance: 50,
       },
       bubble: {
         distance: 200,
@@ -84,7 +84,7 @@ const particlesOptions = {
         radius: 60,
       },
       grab: {
-        distance: 160,
+        distance: 120,
         links: {
           blink: false,
           consent: false,
@@ -141,7 +141,7 @@ const particlesOptions = {
           },
           move: {
             outModes: {
-              default: 'destroy',
+              default: 'bounce',
             },
             speed: 2,
           },
@@ -217,7 +217,7 @@ const particlesOptions = {
           value: 1,
         },
       },
-      enable: true,
+      enable: false,
       mode: 'bounce',
       overlap: {
         enable: true,
@@ -225,7 +225,7 @@ const particlesOptions = {
       },
     },
     color: {
-      value: '#55B475',
+      value: '#428f5e',
       animation: {
         h: {
           count: 0,
@@ -297,15 +297,15 @@ const particlesOptions = {
         options: {},
       },
       outModes: {
-        default: 'out',
-        bottom: 'out',
-        left: 'out',
-        right: 'out',
-        top: 'out',
+        default: 'bounce',
+        bottom: 'bounce',
+        left: 'bounce',
+        right: 'bounce',
+        top: 'bounce',
       },
       random: true,
       size: false,
-      speed: 0.4,
+      speed: 0.5,
       spin: {
         acceleration: 0,
         enable: false,
@@ -329,8 +329,8 @@ const particlesOptions = {
         width: 1920,
         height: 1080,
       },
-      limit: 500,
-      value: 200,
+      limit: 300,
+      value: 150,
     },
     opacity: {
       random: {
@@ -374,18 +374,18 @@ const particlesOptions = {
         minimumValue: 1,
       },
       value: {
-        min: 0.1,
-        max: 3,
+        min: 0.2,
+        max: 2,
       },
       animation: {
         count: 0,
         enable: true,
-        speed: 3,
+        speed: 1,
         decay: 0,
         sync: false,
         destroy: 'none',
         startValue: 'random',
-        minimumValue: 0.1,
+        minimumValue: 0.2,
       },
     },
     stroke: {
@@ -396,7 +396,7 @@ const particlesOptions = {
         enable: false,
         minimumValue: 0,
       },
-      value: 0,
+      value: -1,
       opacityRate: 1,
       sizeRate: 1,
       velocityRate: 1,
@@ -531,13 +531,13 @@ const particlesOptions = {
     links: {
       blink: false,
       color: {
-        value: '#4BAA6A',
+        value: '#428f5e',
       },
-      consent: false,
-      distance: 125,
+      consent: true,
+      distance: 120,
       enable: true,
       frequency: 1,
-      opacity: 0.85,
+      opacity: 0.5,
       shadow: {
         blur: false,
         color: {
@@ -550,7 +550,7 @@ const particlesOptions = {
         frequency: 1,
       },
       width: 1,
-      warp: false,
+      warp: true,
     },
     repulse: {
       random: {

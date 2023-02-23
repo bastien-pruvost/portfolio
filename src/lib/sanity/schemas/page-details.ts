@@ -1,7 +1,7 @@
 import { defineType, defineField, defineArrayMember } from 'sanity'
 
 export default defineType({
-  name: 'pageInfos',
+  name: 'pageDetails',
   title: 'Informations de la page',
   type: 'document',
   fields: [
@@ -55,10 +55,23 @@ export default defineType({
       validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
+      name: 'hobbies',
+      title: 'Loisirs',
+      type: 'array',
+      of: [defineArrayMember({ type: 'reference', to: { type: 'hobbie' } })],
+      validation: (rule) => rule.required().error('Champ requis'),
+    }),
+    defineField({
       name: 'socials',
       title: 'Réseaux sociaux',
       type: 'array',
       of: [defineArrayMember({ type: 'reference', to: { type: 'social' } })],
+      validation: (rule) => rule.required().error('Champ requis'),
+    }),
+    defineField({
+      name: 'resume',
+      title: 'CV',
+      type: 'file',
       validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
@@ -76,20 +89,6 @@ export default defineType({
         rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
     }),
     defineField({
-      name: 'projectsTitle',
-      title: 'Titre de la partie "Projets"',
-      type: 'string',
-      validation: (rule) =>
-        rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
-    }),
-    defineField({
-      name: 'projectsSubTitle',
-      title: 'Sous Titre de la partie "Projets"',
-      type: 'string',
-      validation: (rule) =>
-        rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
-    }),
-    defineField({
       name: 'skillsTitle',
       title: 'Titre de la partie "Compétences"',
       type: 'string',
@@ -99,6 +98,20 @@ export default defineType({
     defineField({
       name: 'skillsSubTitle',
       title: 'Sous Titre de la partie "Compétences"',
+      type: 'string',
+      validation: (rule) =>
+        rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
+    }),
+    defineField({
+      name: 'projectsTitle',
+      title: 'Titre de la partie "Projets"',
+      type: 'string',
+      validation: (rule) =>
+        rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
+    }),
+    defineField({
+      name: 'projectsSubTitle',
+      title: 'Sous Titre de la partie "Projets"',
       type: 'string',
       validation: (rule) =>
         rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),

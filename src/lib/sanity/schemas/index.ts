@@ -1,8 +1,9 @@
-import pageInfos from './page-infos'
+import pageDetails from './page-details'
 import project from './project'
 import skill from './skill'
 import techno from './techno'
 import social from './social'
+import hobbie from './hobbie'
 import blockContent from './block-content'
 
-export const schemaTypes = [pageInfos, project, skill, techno, social, blockContent]
+export const schemaTypes = [pageDetails, project, skill, techno, social, hobbie, blockContent]

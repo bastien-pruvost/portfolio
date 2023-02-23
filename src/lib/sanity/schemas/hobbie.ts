@@ -1,29 +1,22 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'social',
-  title: 'Réseaux sociaux',
+  name: 'hobbie',
+  title: 'Loisirs',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Nom du réseau social',
+      title: 'Nom du loisir',
       type: 'string',
       validation: (rule) =>
         rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
     }),
     defineField({
       name: 'iconName',
-      title: `Nom de l'icone (dossier icons/social-icons)`,
+      title: `Nom de l'icone (dossier icons/hobbie-icons)`,
       type: 'string',
-      validation: (rule) =>
-        rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
-    }),
-    defineField({
-      name: 'url',
-      title: 'Url du réseau social',
-      type: 'url',
-      validation: (rule) => rule.required().error('Doit être une URL'),
+      validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
       name: 'priority',
@@ -32,10 +25,14 @@ export default defineType({
       validation: (rule) => rule.required().min(1).error('Doit être suppérieur à 1'),
     }),
   ],
+
   preview: {
     select: {
       title: 'title',
-      subtitle: 'url',
     },
+    // prepare(selection) {
+    //   const { subtitle } = selection
+    //   return { ...selection, subtitle: author && `by ${author}` }
+    // },
   },
 })
