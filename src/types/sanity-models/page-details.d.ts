@@ -1,4 +1,4 @@
-import type { SanityDocument, ImageAsset, PortableTextBlock } from '@sanity/types'
+import type { SanityDocument, ImageAsset, PortableTextBlock, FileA } from '@sanity/types'
 import type { Social } from '@/types/sanity-models/social'
 import type { Hobbie } from '@/types/sanity-models/hobbie'
 
@@ -13,6 +13,7 @@ export type PageDetails = SanityDocument & {
   bio: Array<PortableTextBlock>
   hobbies: Array<Hobbie>
   socials: Array<Social>
+  resume: FileAsset
   profileTitle: string
   profileSubTitle: string
   projectsTitle: string
