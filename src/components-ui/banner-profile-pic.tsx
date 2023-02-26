@@ -5,11 +5,11 @@ import { cn } from '@/lib/utils/classname'
 
 import type { ImageAsset } from '@sanity/types'
 
-export type ProfilePictureProps = {
+export type BannerProfilePicProps = {
   profilePic: ImageAsset
 }
 
-export const ProfilePicture = ({ profilePic }: ProfilePictureProps) => {
+export const BannerProfilePic = ({ profilePic }: BannerProfilePicProps) => {
   return (
     <Image
       className={cn('block h-full w-full rounded-full object-contain')}
