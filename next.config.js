@@ -2,10 +2,11 @@
 
 const nextConfig = {
   poweredByHeader: false,
-  reactStrictMode: false,
+  reactStrictMode: true,
   swcMinify: true,
   experimental: {
     appDir: true,
+    // typedRoutes: true,
   },
   images: {
     domains: ['cdn.sanity.io'],
