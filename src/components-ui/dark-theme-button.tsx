@@ -19,7 +19,7 @@ export const DarkThemeButton = () => {
   return (
     <select
       className={cn(
-        'absolute bottom-8 left-8 rounded-sm bg-grey-50 p-1 text-grey-800 dark:bg-grey-800 dark:text-grey-50',
+        'fixed bottom-4 right-4 rounded-sm border-2 border-jade-600 bg-grey-50 p-1 text-grey-800 dark:bg-grey-800 dark:text-grey-50',
       )}
       onChange={(e) => setTheme(e.target.value)}
       value={theme}
