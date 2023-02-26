@@ -3,3 +3,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+  }
+
+  .text-color-jade {
+    @apply text-jade-600 dark:text-jade-400;
+  }
+
+  .text-color-base {
+    @apply text-grey-700 dark:text-grey-100;
+  }
+
+  .text-color-light {
+    @apply text-grey-600 dark:text-grey-200;
+  }
+
+  .page-title {
+    @apply text-center text-lg font-medium;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #dcdcde;
+    border-radius: 0.375rem;
+  }
+}
