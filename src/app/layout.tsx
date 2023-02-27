@@ -1,4 +1,5 @@
 import '@/assets/styles/globals.css'
+import { cn } from '@/lib/utils/classname'
 
 export const metadata = {
   title: 'Portfolio Bastien Pruvost | Développeur Web',
@@ -9,7 +10,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='fr' suppressHydrationWarning>
       <head />
-      <body>{children}</body>
+      <body className={cn('relative h-screen w-screen')}>{children}</body>
     </html>
   )
 }

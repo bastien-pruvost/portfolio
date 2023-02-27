@@ -20,30 +20,27 @@ const pageDetails = {
 
 const HomeLayout = ({ children }: PropsWithChildren) => {
   return (
-    <div
-      className={cn(
-        'relative z-[0]',
-        'bg-grey-50 dark:bg-grey-1000',
-        'text-color-base font-poppins',
-      )}
-    >
-      <Providers>
+    <Providers>
+      <div
+        className={cn(
+          'relative z-0 flex h-full w-full flex-col items-center justify-start gap-3 p-4 pt-2',
+          'text-color-base font-poppins',
+          'bg-grey-50 dark:bg-grey-1000',
+        )}
+      >
         <BackgroundParticles />
-        <div className={cn('flex h-screen flex-col justify-start gap-3 p-4 pt-2')}>
-          <Banner pageDetails={pageDetails} />
-          <main
-            className={cn(
-              'z-20 mx-auto w-full overflow-hidden rounded-md shadow-lg',
-              'bg-white dark:bg-grey-800',
-            )}
-          >
-            <Navbar />
-            <div className={cn('p-4', 'scrollbar-custom overflow-y-scroll')}>{children}</div>
-          </main>
+        <Banner pageDetails={pageDetails} />
+        <div
+          className={cn(
+            'flex w-full grow flex-col overflow-hidden rounded-md shadow-lg',
+            'bg-white dark:bg-grey-800',
+          )}
+        >
+          <Navbar />
+          <div className={cn('scrollbar-custom mt-2 overflow-y-scroll')}>{children}</div>
         </div>
-        <DarkThemeButton />
-      </Providers>
-    </div>
+      </div>
+    </Providers>
   )
 }
 

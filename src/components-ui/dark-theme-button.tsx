@@ -1,12 +1,25 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi2'
 
 import { cn } from '@/lib/utils/classname'
 
-export const DarkThemeButton = () => {
+export type DarkThemeButtonProps = {
+  className?: string
+}
+
+export const DarkThemeButton = ({ className }: DarkThemeButtonProps) => {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { theme, resolvedTheme, setTheme } = useTheme()
+
+  const toggleTheme = () => {
+    if (resolvedTheme === 'dark') {
+      setTheme('light')
+    } else {
+      setTheme('dark')
+    }
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -17,16 +30,27 @@ export const DarkThemeButton = () => {
   }
 
   return (
-    <select
-      className={cn(
-        'fixed bottom-4 right-4 rounded-sm border-2 border-jade-600 bg-grey-50 p-1 text-grey-800 dark:bg-grey-800 dark:text-grey-50',
-      )}
-      onChange={(e) => setTheme(e.target.value)}
-      value={theme}
-    >
-      <option value='system'>System</option>
-      <option value='dark'>Dark</option>
-      <option value='light'>Light</option>
-    </select>
+    <>
+      <button
+        onClick={toggleTheme}
+        className={cn(
+          className,
+          resolvedTheme === 'dark' ? 'scale-0 opacity-0' : 'scale-100 opacity-100',
+        )}
+      >
+        <HiOutlineMoon preserveAspectRatio={'xMidYMid slice'} className={cn('h-7 w-7')} />
+      </button>
+
+      <button
+        onClick={toggleTheme}
+        className={cn(
+          className,
+          'scale-100 opacity-100',
+          resolvedTheme === 'light' ? 'scale-0 opacity-0' : 'scale-100 opacity-100',
+        )}
+      >
+        <HiOutlineSun preserveAspectRatio={'xMidYMid slice'} className={cn('h-7 w-7')} />
+      </button>
+    </>
   )
 }

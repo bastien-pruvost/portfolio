@@ -12,11 +12,11 @@ export type BannerSocialsProps = {
 
 export const BannerSocials = ({ className }: BannerSocialsProps) => {
   return (
-    <div className={cn([className, 'flex items-center justify-center gap-4 text-lg'])}>
-      <Link href='https://github.com' className={cn('hover:text-color-jade p-1 transition-all')}>
+    <div className={cn([className, 'flex items-center justify-center gap-4'])}>
+      <Link href='https://github.com' className={cn('hover:text-color-jade p-1')}>
         <BsGithub preserveAspectRatio={'xMidYMid meet'} className={cn('h-7 w-7')} />
       </Link>
-      <Link href='https://linkedin.fr' className={cn('hover:text-color-jade p-1 transition-all')}>
+      <Link href='https://linkedin.fr' className={cn('hover:text-color-jade p-1')}>
         <BsLinkedin preserveAspectRatio={'xMidYMid meet'} className={cn('h-7 w-7')} />
       </Link>
     </div>
