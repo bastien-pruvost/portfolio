@@ -6,6 +6,11 @@ export const Providers = ({ children }: PropsWithChildren) => {
   return (
     <ThemeProvider attribute='class' defaultTheme='dark'>
       {children}
+      <style jsx global>{`
+        .grecaptcha-badge {
+          visibility: hidden !important;
+        }
+      `}</style>
     </ThemeProvider>
   )
 }
