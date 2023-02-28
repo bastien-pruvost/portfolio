@@ -15,18 +15,9 @@ export default defineType({
     defineField({
       name: 'category',
       title: 'Catégorie de la techno',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'JS / TS', value: 'jsts' },
-          { title: 'Front End', value: 'frontend' },
-          { title: 'Back End', value: 'backend' },
-          { title: 'Bases de données', value: 'database' },
-          { title: 'Autres outils', value: 'other' },
-        ],
-      },
-      validation: (rule) =>
-        rule.required().min(1).max(90).error('Min 1 charactères, Max 90 charactères'),
+      type: 'reference',
+      to: [{ type: 'skill' }],
+      validation: (rule) => rule.required().error('Min 1 charactères, Max 90 charactères'),
     }),
     defineField({
       name: 'iconName',
@@ -34,12 +25,12 @@ export default defineType({
       type: 'string',
       validation: (rule) => rule.required().error('Champ requis'),
     }),
-    defineField({
-      name: 'priority',
-      title: `Priorité d'affichage`,
-      type: 'number',
-      validation: (rule) => rule.required().min(1).error('Doit être suppérieur à 1'),
-    }),
+    // defineField({
+    //   name: 'priority',
+    //   title: `Priorité d'affichage`,
+    //   type: 'number',
+    //   validation: (rule) => rule.required().min(1).error('Doit être suppérieur à 1'),
+    // }),
   ],
   preview: {
     select: {

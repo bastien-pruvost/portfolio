@@ -59,7 +59,7 @@ export default defineType({
       title: 'Loisirs',
       type: 'array',
       of: [defineArrayMember({ type: 'reference', to: { type: 'hobbie' } })],
-      validation: (rule) => rule.required().error('Champ requis'),
+      // validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
       name: 'socials',

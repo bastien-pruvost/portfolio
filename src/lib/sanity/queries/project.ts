@@ -5,7 +5,10 @@ export const allProjectsQuery = groq`
     ...,
     "mainImage": mainImage.asset->,
     "slug": slug.current,
-    technos[]->
+    "technos": *[_type == "techno"] {
+      ...,
+      category->
+    }
   }
 `
 

@@ -16,14 +16,14 @@ export default defineType({
       name: 'description',
       title: 'Description (blockContent)',
       type: 'blockContent',
-      validation: (rule) => rule.required().error('Champ requis'),
+      // validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
       name: 'technos',
       title: 'Technologies maitrisées',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'techno' } }],
-      validation: (rule) => rule.required().error('Champ requis'),
+      // validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
       name: 'priority',
