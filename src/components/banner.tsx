@@ -69,14 +69,14 @@ export const Banner = ({ pageDetails }: any) => {
           <BannerProfilePic profilePic={pageDetails.profilePic} />
         </div>
 
-        <h1 className={cn('font-semibold', isBannerOpen ? 'mb-2 text-2xl' : 'mb-1 text-xl')}>
+        <h1 className={cn('font-semibold', isBannerOpen ? 'mb-1 text-2xl' : 'mb-1 text-xl')}>
           Bastien Pruvost
         </h1>
 
         <p
           className={cn(
             'text-color-jade font-medium',
-            isBannerOpen ? 'mb-3 text-base' : 'mb-4 text-sm',
+            isBannerOpen ? 'mb-2 text-base' : 'mb-4 text-sm',
           )}
         >
           Développeur Frontend
@@ -90,7 +90,7 @@ export const Banner = ({ pageDetails }: any) => {
       >
         <div
           className={cn(
-            'text-color-light mb-4 flex items-center justify-center gap-1.5',
+            'text-color-light mb-6 flex items-center justify-center gap-1.5 font-medium',
             isBannerOpen ? 'text-base' : 'text-sm',
           )}
         >
@@ -100,7 +100,7 @@ export const Banner = ({ pageDetails }: any) => {
           />
           <p>Toulouse</p>
         </div>
-        <BannerSocials className={cn('text-color-light mb-6 mt-2')} />
+        <BannerSocials className={cn('text-color-light mb-8 mt-2')} />
 
         <BannerLinks className={cn('text-color-base mx-auto')} />
       </div>

@@ -8,6 +8,17 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      gridTemplateColumns: (theme) => {
+        const spacing = theme('spacing')
+
+        return Object.keys(spacing).reduce((accumulator, spacingKey) => {
+          return {
+            ...accumulator,
+            [`fit-${spacingKey}`]: `repeat(auto-fit, minmax(${spacing[spacingKey]}, 1fr))`,
+            [`fill-${spacingKey}`]: `repeat(auto-fill, minmax(${spacing[spacingKey]}, 1fr))`,
+          }
+        }, {})
+      },
       fontSize: {
         xs: '0.75rem',
         sm: '0.875rem',

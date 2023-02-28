@@ -1,13 +1,13 @@
 import { cn } from '@/lib/utils/classname'
 import Image from 'next/image'
 
-export const TechnoBadge = () => {
+export const SkillTechno = () => {
   return (
-    <div className={cn('flex flex-col items-center gap-1 p-2')}>
+    <div className={cn('flex flex-col items-center gap-1')}>
       <div className={cn('relative h-8 w-8')}>
         <Image
           className={cn('block h-full w-full object-contain')}
-          src='../assets/icons/dev-icons/javascript/javascript-original.svg'
+          src='/assets/icons/dev-icons/javascript/javascript-original.svg'
           alt='logo js'
           // quality={100}
           // sizes='128px'
@@ -22,7 +22,7 @@ export const TechnoBadge = () => {
           // priority
         />
       </div>
-      <p className={cn('text-xs')}>Javascript</p>
+      <p className={cn('paragraph text-xs font-medium')}>Javascript</p>
     </div>
   )
 }

@@ -1,19 +1,23 @@
 import { cn } from '@/lib/utils/classname'
 import React from 'react'
 import { PageTransition } from '@/components-ui/page-transition'
-import { TechnoBadge } from '@/components-ui/techno-badge'
+import { SkillTechno } from '@/components-ui/skill-techno'
 
 const SkillsPage = () => {
   return (
-    <PageTransition className={cn('pb-4')}>
-      <h2>Mes compétences</h2>
+    <PageTransition>
+      <h2 className={cn('page-title')}>Mes compétences</h2>
       {/* <div>JS/TS</div> */}
-      <div className={cn('px-5')}>
-        <h3>Front-End</h3>
-        <div className={cn('flex flex-wrap justify-center gap-2')}>
-          <TechnoBadge />
-          <TechnoBadge />
-          <TechnoBadge />
+      <div className={cn('p-5')}>
+        <h3 className={cn('page-subtitle')}>Front-End</h3>
+        <div className={cn('grid-cols-auto grid gap-6')}>
+          <SkillTechno />
+          <SkillTechno />
+          <SkillTechno />
+          <SkillTechno />
+          <SkillTechno />
+          <SkillTechno />
+          <SkillTechno />
         </div>
       </div>
     </PageTransition>
