@@ -1,10 +1,8 @@
 import { groq } from 'next-sanity'
 
-export const allSkillsQuery = groq`
+export const skillsQuery = groq`
   *[_type == "skill"] {
     ...,
-    "technos": *[_type == "techno" && category._ref ==  ^._id] {
-      ...,
-    }
+    technos[]->
   }
 `

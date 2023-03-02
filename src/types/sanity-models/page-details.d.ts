@@ -1,4 +1,4 @@
-import type { SanityDocument, ImageAsset, PortableTextBlock, FileA } from '@sanity/types'
+import type { SanityDocument, ImageAsset, PortableTextBlock, FileAsset } from '@sanity/types'
 import type { Social } from '@/types/sanity-models/social'
 import type { Hobbie } from '@/types/sanity-models/hobbie'
 

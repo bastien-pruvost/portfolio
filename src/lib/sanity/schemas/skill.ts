@@ -23,7 +23,7 @@ export default defineType({
       title: 'Technologies maitrisées',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'techno' } }],
-      // validation: (rule) => rule.required().error('Champ requis'),
+      validation: (rule) => rule.required().error('Champ requis'),
     }),
     defineField({
       name: 'priority',

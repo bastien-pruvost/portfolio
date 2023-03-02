@@ -5,6 +5,6 @@ export type Skill = SanityDocument & {
   _type: 'skill'
   title: string
   description?: PortableTextBlock[]
-  technos?: Techno[]
+  technos: Techno[]
   priority: number
 }

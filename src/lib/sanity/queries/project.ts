@@ -1,14 +1,11 @@
 import { groq } from 'next-sanity'
 
-export const allProjectsQuery = groq`
+export const projectsQuery = groq`
   *[_type == "project"] {
     ...,
     "mainImage": mainImage.asset->,
     "slug": slug.current,
-    "technos": *[_type == "techno"] {
-      ...,
-      category->
-    }
+    technos[]->
   }
 `
 
