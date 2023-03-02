@@ -14,7 +14,7 @@ const ContactPage = () => {
             :
           </h3>
           <ContactInformations />
-          <p className={cn('mb-4')}>Formulaire de contact :</p>
+          {/* <p className={cn('mb-4')}>Formulaire de contact :</p> */}
           <ContactForm />
         </div>
       </PageTransition>

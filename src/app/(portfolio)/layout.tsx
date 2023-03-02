@@ -52,16 +52,18 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
         <BackgroundParticles />
         <div
           className={cn(
-            'flex h-full w-full flex-col items-center justify-start gap-3 p-4 md:p-8 lg:max-h-[52rem] lg:min-h-[626px] lg:max-w-[88rem] lg:flex-row lg:items-center lg:px-16 lg:py-16',
+            'h-full w-full p-4 md:p-8 lg:px-16 lg:py-16',
+            'flex flex-col items-center justify-start gap-3 lg:flex-row lg:items-center ',
+            'lg:max-h-[52rem] lg:min-h-[626px] lg:max-w-[88rem]',
           )}
         >
           <Banner pageDetails={pageDetails} />
           <div
             className={cn(
-              'dark:shadow-left-md relative z-10 flex w-full grow flex-col rounded-md shadow-md ',
-              'animation-entry-app overflow-hidden',
+              'dark:shadow-left-md relative z-10 w-full overflow-hidden rounded-md shadow-md lg:h-full',
+              'flex grow flex-col',
+              'animation-entry-app ',
               'bg-grey-0 dark:bg-grey-800',
-              'lg:h-full',
             )}
           >
             <Navbar />

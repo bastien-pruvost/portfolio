@@ -15,7 +15,7 @@ const ProfilePage = async () => {
     <div className={cn('scrollbar-custom mt-2 overflow-y-scroll pb-6')}>
       <PageTransition>
         <h2 className={cn('page-title')}>{pageDetails.profileTitle}</h2>
-        <div className={cn('prose-profile md:text-base', 'p-5 pb-2 md:px-8')}>
+        <div className={cn('prose-profile p-5 pb-2 md:px-8 md:text-base')}>
           <PortableText value={pageDetails.bio} />
         </div>
         <PageLinkBottom href='/skills'>Mes compétences</PageLinkBottom>

@@ -33,7 +33,7 @@ export const ContactInformations = () => {
           </a>
         )}
       </div>
-      <div className={cn('mb-4')}>
+      <div className={cn('mb-6')}>
         <span className={cn('text-color-light')}>Téléphone : </span>
         {telDisplay && tel && (
           <a href={`tel:+33${tel}`}>

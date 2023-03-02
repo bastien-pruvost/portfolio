@@ -5,7 +5,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='fr' suppressHydrationWarning>
       <head />
-      <body className={cn('relative h-screen w-screen')}>{children}</body>
+      <body className={cn('relative h-screen w-screen overflow-hidden')}>{children}</body>
     </html>
   )
 }

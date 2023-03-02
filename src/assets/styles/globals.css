@@ -50,10 +50,6 @@
     @apply prose-p:text-color-light prose-strong:strong prose-h3:page-subtitle prose max-w-none prose-p:my-0 prose-p:mb-3 prose-p:text-base prose-p:leading-relaxed;
   }
 
-  .bottom-page-link {
-    @apply text-color-jade transition-text-color mr-5 ml-auto inline text-right font-medium underline underline-offset-[3px] hover:text-jade-400 hover:dark:text-jade-600 md:mr-8;
-  }
-
   .scrollbar-custom::-webkit-scrollbar {
     background-color: transparent;
     width: 6px;

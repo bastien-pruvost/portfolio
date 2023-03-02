@@ -36,8 +36,7 @@ export const Banner = ({ pageDetails }: BannerProps) => {
         'transition-margin animation-entry-banner relative w-full rounded-md text-center',
         'bg-grey-0 shadow-md dark:bg-grey-800',
         isBannerOpen ? 'mt-16' : 'mt-8',
-        ' lg:max-w-sm',
-        'lg:-mr-11 lg:pr-8',
+        ' lg:-mr-11 lg:max-w-sm lg:pr-8',
       )}
     >
       <DarkThemeButton
