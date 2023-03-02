@@ -1,11 +1,9 @@
 'use client'
 
-import { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
+import { useTheme } from 'next-themes'
 import { loadFull } from 'tsparticles'
 import Particles from 'react-tsparticles'
-
-import { useTheme } from 'next-themes'
-
 import type { Engine, IOptions, RecursivePartial } from 'tsparticles-engine'
 
 export const BackgroundParticles = () => {

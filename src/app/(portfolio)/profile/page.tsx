@@ -1,13 +1,12 @@
-import { cn } from '@/lib/utils/classname'
-import React from 'react'
-import { PageTransition } from '@/components-ui/page-transition'
-import Link from 'next/link'
-import { HiChevronRight } from 'react-icons/hi2'
-import { sanityClientFetch } from '@/lib/sanity/sanity.client'
-import type { PageDetails } from '@/types/sanity-models/page-details'
-import { pageDetailsQuery } from '@/lib/sanity/queries/page-details'
 import { PortableText } from '@portabletext/react'
+
+import { sanityClientFetch } from '@/lib/sanity/sanity.client'
+import { pageDetailsQuery } from '@/lib/sanity/queries/page-details'
+import { cn } from '@/lib/utils/classname'
+import { PageTransition } from '@/components-ui/page-transition'
 import { PageLinkBottom } from '@/components-ui/page-link-bottom'
+
+import type { PageDetails } from '@/types/sanity-models/page-details'
 
 const ProfilePage = async () => {
   const pageDetails = await sanityClientFetch<PageDetails>(pageDetailsQuery)

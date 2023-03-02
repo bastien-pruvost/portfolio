@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils/classname'
+import { SkillTechno } from '@/components-ui/skill-techno'
+
 import type { Skill } from '@/types/sanity-models/skill'
-import { SkillTechno } from './skill-techno'
 
 type SkillSectionProps = {
   skill: Skill

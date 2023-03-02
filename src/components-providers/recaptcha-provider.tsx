@@ -1,8 +1,6 @@
 'use client'
-
-import type { PropsWithChildren } from 'react'
-
 import { ReCaptchaProvider } from 'next-recaptcha-v3'
+import type { PropsWithChildren } from 'react'
 
 export const RecaptchaProvider = ({ children }: PropsWithChildren) => {
   return (

@@ -1,10 +1,12 @@
-import { cn } from '@/lib/utils/classname'
-import type { Project } from '@/types/sanity-models/project'
-import { PortableText } from '@portabletext/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsGithub, BsGlobe, BsGlobe2 } from 'react-icons/bs'
-import { ProjectTechno } from './project-techno'
+import { BsGithub, BsGlobe2 } from 'react-icons/bs'
+import { PortableText } from '@portabletext/react'
+
+import { cn } from '@/lib/utils/classname'
+import { ProjectTechno } from '@/components-ui/project-techno'
+
+import type { Project } from '@/types/sanity-models/project'
 
 type ProjectCardProps = {
   project: Project

@@ -1,7 +1,6 @@
-import sgMail from '@sendgrid/mail'
-import { headers } from 'next/headers'
-
 import { NextRequest, NextResponse } from 'next/server'
+import { headers } from 'next/headers'
+import sgMail from '@sendgrid/mail'
 
 export async function POST(request: NextRequest) {
   const { SENDGRID_API_KEY, SENDGRID_EMAIL_TO, SENDGRID_EMAIL_FROM, RECAPTCHA_SECRET_KEY } =

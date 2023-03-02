@@ -1,15 +1,15 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { HiMapPin, HiOutlineBars3, HiXMark } from 'react-icons/hi2'
 
 import { cn } from '@/lib/utils/classname'
+import { useOutsideClick } from '@/lib/hooks/use-outside-click'
 import { BannerProfilePic } from '@/components-ui/banner-profile-pic'
 import { BannerSocials } from '@/components-ui/banner-socials'
 import { BannerLinks } from '@/components-ui/banner-links'
+import { DarkThemeButton } from '@/components-ui/dark-theme-button'
 
 import type { PageDetails } from '@/types/sanity-models/page-details'
-import { DarkThemeButton } from '@/components-ui/dark-theme-button'
-import { useOutsideClick } from '@/lib/hooks/use-outside-click'
 
 export type BannerProps = {
   pageDetails: PageDetails

@@ -1,6 +1,7 @@
-import { cn } from '@/lib/utils/classname'
 import Link from 'next/link'
 import type { IconType } from 'react-icons'
+
+import { cn } from '@/lib/utils/classname'
 
 export type NavbarLinkProps = {
   href: string

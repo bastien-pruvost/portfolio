@@ -1,16 +1,13 @@
-import { cn } from '@/lib/utils/classname'
-import React from 'react'
-import { PageTransition } from '@/components-ui/page-transition'
-import { SkillTechno } from '@/components-ui/skill-techno'
 import { sanityClientFetch } from '@/lib/sanity/sanity.client'
-import { skillsQuery } from '@/lib/sanity/queries/skill'
-import type { Skill } from '@/types/sanity-models/skill'
-import { SkillSection } from '@/components-ui/skill-section'
-import type { PageDetails } from '@/types/sanity-models/page-details'
 import { pageDetailsQuery } from '@/lib/sanity/queries/page-details'
-import Link from 'next/link'
-import { HiChevronRight } from 'react-icons/hi2'
+import { skillsQuery } from '@/lib/sanity/queries/skill'
+import { cn } from '@/lib/utils/classname'
+import { PageTransition } from '@/components-ui/page-transition'
+import { SkillSection } from '@/components-ui/skill-section'
 import { PageLinkBottom } from '@/components-ui/page-link-bottom'
+
+import type { PageDetails } from '@/types/sanity-models/page-details'
+import type { Skill } from '@/types/sanity-models/skill'
 
 const SkillsPage = async () => {
   const pageDetails = await sanityClientFetch<PageDetails>(pageDetailsQuery)

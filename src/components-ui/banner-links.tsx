@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { HiOutlineChatBubbleOvalLeftEllipsis, HiOutlineArrowDownOnSquare } from 'react-icons/hi2'
 
 import { cn } from '@/lib/utils/classname'
+
 import type { FileAsset } from 'sanity'
 
 export type BannerLinksProps = {

@@ -1,6 +1,7 @@
-import { cn } from '@/lib/utils/classname'
-import type { Techno } from '@/types/sanity-models/techno'
 import Image from 'next/image'
+import { cn } from '@/lib/utils/classname'
+
+import type { Techno } from '@/types/sanity-models/techno'
 
 type SkillTechnoProps = {
   techno: Techno

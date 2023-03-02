@@ -1,10 +1,11 @@
 'use client'
 
-import { useReCaptcha } from 'next-recaptcha-v3'
-import { cn } from '@/lib/utils/classname'
 import { FormEvent, useState } from 'react'
-import { RecaptchaProvider } from '@/components-providers/recaptcha-provider'
+import { useReCaptcha } from 'next-recaptcha-v3'
+
+import { cn } from '@/lib/utils/classname'
 import { adjustTextareaHeight } from '@/lib/utils/text-area'
+import { RecaptchaProvider } from '@/components-providers/recaptcha-provider'
 
 export type MailData = { fullName: string; email: string; message: string }
 

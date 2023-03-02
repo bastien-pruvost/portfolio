@@ -1,7 +1,9 @@
-import { cn } from '@/lib/utils/classname'
 import Link from 'next/link'
-import type { PropsWithChildren } from 'react'
 import { HiChevronRight } from 'react-icons/hi2'
+
+import { cn } from '@/lib/utils/classname'
+
+import type { PropsWithChildren } from 'react'
 
 type PageLinkBottomProps = PropsWithChildren<{
   href: string

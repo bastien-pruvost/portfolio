@@ -4,7 +4,6 @@ import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
 import { cn } from '@/lib/utils/classname'
 
 import type { Social } from '@/types/sanity-models/social'
-import Image from 'next/image'
 
 export type BannerSocialsProps = {
   className?: string

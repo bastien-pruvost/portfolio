@@ -1,4 +1,3 @@
-// 'use client'
 import { cn } from '@/lib/utils/classname'
 
 import type { PropsWithChildren } from 'react'

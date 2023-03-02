@@ -1,16 +1,16 @@
 import '@/assets/styles/globals.css'
+import { Poppins } from 'next/font/google'
 
+import { sanityClientFetch } from '@/lib/sanity/sanity.client'
+import { pageDetailsQuery } from '@/lib/sanity/queries/page-details'
 import { cn } from '@/lib/utils/classname'
 import { Providers } from '@/components-providers/providers'
-import { BackgroundParticles } from '@/components-ui/background-particles'
 import { Banner } from '@/components/banner'
-import { DarkThemeButton } from '@/components-ui/dark-theme-button'
 import { Navbar } from '@/components/navbar'
-import { pageDetailsQuery } from '@/lib/sanity/queries/page-details'
+import { BackgroundParticles } from '@/components-ui/background-particles'
+
 import type { PropsWithChildren } from 'react'
 import type { PageDetails } from '@/types/sanity-models/page-details'
-import { sanityClientFetch } from '@/lib/sanity/sanity.client'
-import { Poppins } from 'next/font/google'
 
 export const metadata = {
   title: 'Portfolio Bastien Pruvost',

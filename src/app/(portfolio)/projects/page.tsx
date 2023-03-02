@@ -1,11 +1,11 @@
+import { sanityClientFetch } from '@/lib/sanity/sanity.client'
+import { projectsQuery } from '@/lib/sanity/queries/project'
 import { cn } from '@/lib/utils/classname'
-import React from 'react'
 import { PageTransition } from '@/components-ui/page-transition'
 import { ProjectCard } from '@/components-ui/project-card'
-import type { Project } from '@/types/sanity-models/project'
-import { projectsQuery } from '@/lib/sanity/queries/project'
-import { sanityClientFetch } from '@/lib/sanity/sanity.client'
 import { PageLinkBottom } from '@/components-ui/page-link-bottom'
+
+import type { Project } from '@/types/sanity-models/project'
 
 const ProjectsPage = async () => {
   const projects = await sanityClientFetch<Project[]>(projectsQuery)

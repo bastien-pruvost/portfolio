@@ -1,7 +1,6 @@
 'use client'
-
-import { cn } from '@/lib/utils/classname'
 import { useEffect } from 'react'
+import { cn } from '@/lib/utils/classname'
 
 export type ErrorProps = {
   error: Error

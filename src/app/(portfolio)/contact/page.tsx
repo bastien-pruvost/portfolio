@@ -1,8 +1,7 @@
-import { PageTransition } from '@/components-ui/page-transition'
-import { ContactForm } from '@/components/contact-form'
-import { ContactInformations } from '@/components/contact-informations'
 import { cn } from '@/lib/utils/classname'
-import React from 'react'
+import { PageTransition } from '@/components-ui/page-transition'
+import { ContactInformations } from '@/components/contact-informations'
+import { ContactForm } from '@/components/contact-form'
 
 const ContactPage = () => {
   return (

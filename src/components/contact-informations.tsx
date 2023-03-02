@@ -1,7 +1,6 @@
 'use client'
-
-import { cn } from '@/lib/utils/classname'
 import { useEffect, useState } from 'react'
+import { cn } from '@/lib/utils/classname'
 
 export const ContactInformations = () => {
   const [tel, setTel] = useState<string | null>(null)
