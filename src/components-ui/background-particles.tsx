@@ -4,6 +4,9 @@ import { useCallback } from 'react'
 import { useTheme } from 'next-themes'
 import { loadFull } from 'tsparticles'
 import Particles from 'react-tsparticles'
+
+import { cn } from '@/lib/utils/classname'
+
 import type { Engine, IOptions, RecursivePartial } from 'tsparticles-engine'
 
 export const BackgroundParticles = () => {
@@ -28,7 +31,7 @@ export const BackgroundParticles = () => {
   return (
     <Particles
       id='tsparticles'
-      className='animation-entry-particles fixed top-0 left-0 -z-[1] h-screen w-screen'
+      className={cn('animation-entry-particles fixed top-0 left-0 -z-[1] h-screen w-screen')}
       init={particlesInit}
       options={
         {

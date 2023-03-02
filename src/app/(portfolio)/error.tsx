@@ -13,7 +13,7 @@ const Error = ({ error, reset }: ErrorProps) => {
   }, [error])
 
   return (
-    <div className='z-50 mt-4 text-center'>
+    <div className={cn('z-50 mt-4 text-center')}>
       <p className={cn('mb-4 text-xl font-medium text-red-800 opacity-100 dark:text-red-300')}>
         Une erreur est survenue !
       </p>

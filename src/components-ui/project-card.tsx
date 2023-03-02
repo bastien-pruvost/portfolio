@@ -58,7 +58,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 )}
               >
                 <span>Github</span>
-                <BsGithub className='-mt-[1px] h-5 w-5' />
+                <BsGithub className={cn('-mt-[1px] h-5 w-5')} />
               </Link>
             </>
           ) : (
@@ -86,7 +86,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 )}
               >
                 <span>Site</span>
-                <BsGlobe2 className='-mt-[1px] h-5 w-5' />
+                <BsGlobe2 className={cn('-mt-[1px] h-5 w-5')} />
               </Link>
             </>
           ) : (
