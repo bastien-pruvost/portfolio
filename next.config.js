@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+// const withBundleAnalyzer = require('@next/bundle-analyzer')
+
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
     appDir: true,
+    // optimizeCss: true,
     // typedRoutes: true,
   },
   images: {
