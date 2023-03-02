@@ -4,6 +4,7 @@ import { useReCaptcha } from 'next-recaptcha-v3'
 import { cn } from '@/lib/utils/classname'
 import { FormEvent, useState } from 'react'
 import { RecaptchaProvider } from '@/components-providers/recaptcha-provider'
+import { adjustTextareaHeight } from '@/lib/utils/text-area'
 
 export type MailData = { fullName: string; email: string; message: string }
 
@@ -64,39 +65,46 @@ export const ContactForm = () => {
   return (
     <RecaptchaProvider>
       <form onSubmit={handleSubmit} className={cn('flex flex-col')}>
-        <label htmlFor='fullname' className={cn('text-color-light mb-1 text-sm')}>
+        <label htmlFor='fullname' className={cn('text-color-light mb-1.5 ml-0.5 text-sm')}>
           Votre nom :
         </label>
         <input
           type='text'
           name='fullname'
-          className={cn('mb-2 rounded-sm bg-grey-100 px-3 py-2 dark:bg-grey-700')}
+          className={cn('mb-4 rounded-[5px] bg-grey-50 px-3 py-2 dark:bg-grey-700')}
           required
         />
 
-        <label htmlFor='email' className={cn('text-color-light mb-1 text-sm')}>
+        <label htmlFor='email' className={cn('text-color-light mb-1.5 ml-0.5 text-sm')}>
           Votre email :
         </label>
         <input
           type='email'
           name='email'
-          className={cn('mb-2 rounded-sm bg-grey-100 px-3 py-2 dark:bg-grey-700')}
+          className={cn('mb-4 rounded-[5px] bg-grey-50 px-3 py-2 dark:bg-grey-700')}
           required
         />
 
-        <label htmlFor='message' className={cn('text-color-light mb-1 text-sm')}>
+        <label htmlFor='message' className={cn('text-color-light mb-1.5 ml-0.5 text-sm')}>
           Votre message :
         </label>
         <textarea
           name='message'
-          className={cn('mb-4 resize-none rounded-sm bg-grey-100 px-3 py-2 dark:bg-grey-700')}
+          className={cn(
+            'mb-6 h-28 resize-none rounded-[5px] bg-grey-50 px-3 py-2 dark:bg-grey-700',
+          )}
           required
+          onInput={adjustTextareaHeight}
         />
 
         {error && <p className={cn('mb-4 text-red-800 dark:text-red-300')}>{error}</p>}
         {responseMessage && <p className={cn('text-color-jade mb-4')}>{responseMessage}</p>}
 
-        <button className={cn('rounded-sm bg-jade-400 py-2 font-semibold text-grey-800')}>
+        <button
+          className={cn(
+            'transition-bg-color rounded-[5px] bg-jade-700 py-2 font-semibold text-grey-50 hover:bg-jade-600 dark:bg-jade-500 dark:text-grey-800 hover:dark:bg-jade-400',
+          )}
+        >
           Envoyer
         </button>
       </form>

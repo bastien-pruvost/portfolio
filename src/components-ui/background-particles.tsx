@@ -30,7 +30,7 @@ export const BackgroundParticles = () => {
   return (
     <Particles
       id='tsparticles'
-      className='fixed top-0 left-0 -z-[1] h-screen w-screen'
+      className='animation-entry-particles fixed top-0 left-0 -z-[1] h-screen w-screen'
       init={particlesInit}
       options={
         {

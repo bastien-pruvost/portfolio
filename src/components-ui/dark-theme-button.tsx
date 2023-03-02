@@ -37,6 +37,7 @@ export const DarkThemeButton = ({ className }: DarkThemeButtonProps) => {
           className,
           resolvedTheme === 'dark' ? 'scale-0 opacity-0' : 'scale-100 opacity-100',
         )}
+        aria-label='Activer le theme sombre (Mode nuit)'
       >
         <HiOutlineMoon preserveAspectRatio={'xMidYMid slice'} className={cn('h-7 w-7')} />
       </button>
@@ -48,6 +49,7 @@ export const DarkThemeButton = ({ className }: DarkThemeButtonProps) => {
           'scale-100 opacity-100',
           resolvedTheme === 'light' ? 'scale-0 opacity-0' : 'scale-100 opacity-100',
         )}
+        aria-label='Activer le theme clair (Mode jour)'
       >
         <HiOutlineSun preserveAspectRatio={'xMidYMid slice'} className={cn('h-7 w-7')} />
       </button>

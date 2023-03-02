@@ -5,9 +5,6 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-      },
       gridTemplateColumns: (theme) => {
         const spacing = theme('spacing')
 
@@ -37,10 +34,11 @@ module.exports = {
       colors: {
         current: 'currentColor',
         grey: {
-          0: '#f6f6f7',
+          0: '#fcfcfc',
+          25: '#f6f6f7',
           50: '#edeeee',
-          100: '#DCDCDE',
-          200: '#C1C2C5',
+          100: '#dcdcde',
+          200: '#c1c2c5',
           300: '#96979B',
           400: '#7b7d83',
           500: '#65676e',

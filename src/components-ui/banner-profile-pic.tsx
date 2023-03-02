@@ -6,24 +6,23 @@ import { cn } from '@/lib/utils/classname'
 import type { ImageAsset } from '@sanity/types'
 
 export type BannerProfilePicProps = {
+  className: string
   profilePic: ImageAsset
 }
 
-export const BannerProfilePic = ({ profilePic }: BannerProfilePicProps) => {
+export const BannerProfilePic = ({ className, profilePic }: BannerProfilePicProps) => {
   return (
     <Image
-      className={cn('block h-full w-full rounded-full object-contain')}
+      className={cn(className)}
       src={profilePic.url}
-      alt='Photo de Bastien Pruvost'
+      alt='Bastien Pruvost - Développeur Web'
       quality={100}
-      sizes='128px'
-      // sizes='(max-width: 390px) 79vw,
-      //           (max-width: 640px) 88vw,
-      //           (max-width: 768px) 90vw,
-      //           (max-width: 1024px) 43vw,
-      //           28vw'
+      // sizes='128px'
+      width={128}
+      height={128}
+      // width={profilePic.metadata.dimensions.width}
+      // height={profilePic.metadata.dimensions.height}
       priority
-      fill
     />
   )
 }
