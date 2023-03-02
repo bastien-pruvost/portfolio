@@ -11,7 +11,7 @@ import { DarkThemeButton } from '@/components-ui/dark-theme-button'
 
 import type { PageDetails } from '@/types/sanity-models/page-details'
 
-export type BannerProps = {
+type BannerProps = {
   pageDetails: PageDetails
 }
 

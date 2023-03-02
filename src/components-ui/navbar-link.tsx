@@ -3,7 +3,7 @@ import type { IconType } from 'react-icons'
 
 import { cn } from '@/lib/utils/classname'
 
-export type NavbarLinkProps = {
+type NavbarLinkProps = {
   href: string
   label: string
   IconComponent: IconType

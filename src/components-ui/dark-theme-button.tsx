@@ -5,7 +5,7 @@ import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi2'
 
 import { cn } from '@/lib/utils/classname'
 
-export type DarkThemeButtonProps = {
+type DarkThemeButtonProps = {
   className?: string
 }
 

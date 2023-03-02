@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils/classname'
 
 import type { FileAsset } from 'sanity'
 
-export type BannerLinksProps = {
+type BannerLinksProps = {
   className?: string
   resume: FileAsset
 }

@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils/classname'
 
 import type { ImageAsset } from '@sanity/types'
 
-export type BannerProfilePicProps = {
+type BannerProfilePicProps = {
   className: string
   profilePic: ImageAsset
 }

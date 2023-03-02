@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils/classname'
 
 import type { PropsWithChildren } from 'react'
 
-export type PageTransitionProps = PropsWithChildren<{
+type PageTransitionProps = PropsWithChildren<{
   className?: string
 }>
 

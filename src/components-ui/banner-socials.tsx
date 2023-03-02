@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils/classname'
 
 import type { Social } from '@/types/sanity-models/social'
 
-export type BannerSocialsProps = {
+type BannerSocialsProps = {
   className?: string
   socials: Array<Social>
 }
