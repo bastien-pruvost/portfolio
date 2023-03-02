@@ -14,7 +14,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div
       className={cn(
-        'relative flex flex-col overflow-hidden rounded-[5px] border border-grey-50 bg-white shadow-sm dark:border-grey-700 dark:bg-grey-800',
+        'relative flex flex-col overflow-hidden rounded-[5px] border border-grey-100 bg-white shadow-sm dark:border-grey-700 dark:bg-grey-800',
       )}
     >
       <Image
@@ -22,20 +22,16 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         src={project.mainImage.url}
         alt={`Capture d'écran du projet ${project.title}`}
         quality={100}
-        // sizes='128px'
         width={project.mainImage.metadata.dimensions.width}
         height={project.mainImage.metadata.dimensions.height}
-        // fill
-        // priority
       />
       <div className={cn('flex grow flex-col justify-start')}>
         <div className={cn('flex grow flex-col p-3')}>
-          <h3 className={cn('mb-2 font-semibold md:text-lg')}>{project.title}</h3>
-          <div className={cn('prose-custom mb-1 grow')}>
+          <h3 className={cn('text-color-jade mb-2 font-semibold md:text-lg')}>{project.title}</h3>
+          <div className={cn('prose-custom mb-2')}>
             <PortableText value={project.description} />
           </div>
-          {/* <p className={cn('paragraph mb-3 font-medium')}>{project.description}</p> */}
-          <div className={cn('mb-3 flex flex-wrap gap-1.5')}>
+          <div className={cn('mb-4 flex flex-wrap items-start gap-x-1.5 gap-y-2')}>
             {project.technos &&
               project.technos.map(
                 (techno) => techno && <ProjectTechno key={techno._id} techno={techno} />,
@@ -45,7 +41,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
         <div
           className={cn(
-            'relative bottom-0 left-0 right-0 divide-y border-t border-grey-100 dark:border-grey-700',
+            'relative bottom-0 left-0 right-0 flex divide-x border-t border-grey-100 dark:border-grey-700',
           )}
         >
           {project.githubLink ? (
@@ -54,24 +50,24 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 href={project.githubLink}
                 target={'_blank'}
                 className={cn(
-                  'flex w-full items-center justify-center gap-3 border-grey-100 py-4 px-6 text-sm dark:border-grey-700 md:text-base',
+                  'flex w-full shrink items-center justify-center gap-2 border-grey-100 py-3 px-4 text-sm dark:border-grey-700',
                   'hover:bg-grey-25 hover:dark:bg-grey-900',
                   'hover:text-color-jade transition-all-color',
                 )}
               >
-                <span>Voir le projet github</span>
-                <BsGithub className='-mt-[1px] h-6 w-6' />
+                <span>Github</span>
+                <BsGithub className='-mt-[1px] h-5 w-5' />
               </Link>
             </>
           ) : (
             <>
               <div
                 className={cn(
-                  'flex w-full cursor-default items-center justify-center gap-3 border-grey-100 py-4 px-6 text-sm dark:border-grey-700 md:text-base',
+                  'flex w-full shrink cursor-default items-center justify-center gap-2 border-grey-100 py-3 px-4 text-sm dark:border-grey-700',
                 )}
               >
-                <span className={cn('opacity-10')}>Voir le projet github</span>
-                <BsGithub className={cn('-mt-[1px] h-6 w-6 opacity-10')} />
+                <span className={cn('opacity-20')}>Github</span>
+                <BsGithub className={cn('-mt-[1px] h-5 w-5 opacity-10')} />
               </div>
             </>
           )}
@@ -82,24 +78,24 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                 href={project.websiteLink}
                 target={'_blank'}
                 className={cn(
-                  'transition-all-color flex w-full items-center justify-center gap-3 border-grey-100 py-4 px-6 text-sm dark:border-grey-700 md:text-base',
+                  'transition-all-color flex w-full shrink items-center justify-center gap-2 border-grey-100 py-3 px-4 text-sm dark:border-grey-700',
                   'hover:bg-grey-25 hover:dark:bg-grey-900',
                   'hover:text-color-jade ',
                 )}
               >
-                <span>Voir le site</span>
-                <BsGlobe2 className='-mt-[1px] h-6 w-6' />
+                <span>Site</span>
+                <BsGlobe2 className='-mt-[1px] h-5 w-5' />
               </Link>
             </>
           ) : (
             <>
               <div
                 className={cn(
-                  'flex w-full cursor-default items-center justify-center gap-3 border-grey-100 py-4 px-6 text-sm dark:border-grey-700 md:text-base',
+                  'flex w-full shrink cursor-default items-center justify-center gap-2 border-grey-100 py-3 px-4 text-sm dark:border-grey-700',
                 )}
               >
-                <span className={cn('opacity-10')}>Voir le site</span>
-                <BsGlobe2 className={cn('-mt-[1px] h-6 w-6 opacity-10')} />
+                <span className={cn('opacity-20')}>Site</span>
+                <BsGlobe2 className={cn('-mt-[1px] h-5 w-5 opacity-10')} />
               </div>
             </>
           )}

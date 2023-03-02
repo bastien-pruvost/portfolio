@@ -12,6 +12,23 @@ import type { PageDetails } from '@/types/sanity-models/page-details'
 import { sanityClientFetch } from '@/lib/sanity/sanity.client'
 import { Poppins } from 'next/font/google'
 
+export const metadata = {
+  title: 'Portfolio Bastien Pruvost',
+  description:
+    'Portfolio de Bastien Pruvost. Développeur Web spécialisé dans la création de sites web en Javascript, TypeScript, React, Node.js.',
+  creator: 'Bastien Pruvost',
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+    },
+  },
+}
+
 const poppins = Poppins({
   weight: ['400', '500', '600'],
   subsets: ['latin'],
@@ -35,13 +52,13 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
         <BackgroundParticles />
         <div
           className={cn(
-            'flex h-full w-full flex-col items-center justify-start gap-3 p-4 md:p-8 lg:max-h-[48rem] lg:min-h-[626px] lg:max-w-[88rem] lg:flex-row lg:items-center lg:px-16 lg:py-16',
+            'flex h-full w-full flex-col items-center justify-start gap-3 p-4 md:p-8 lg:max-h-[52rem] lg:min-h-[626px] lg:max-w-[88rem] lg:flex-row lg:items-center lg:px-16 lg:py-16',
           )}
         >
           <Banner pageDetails={pageDetails} />
           <div
             className={cn(
-              'shadow-left-md relative z-10 flex w-full grow flex-col rounded-md ',
+              'dark:shadow-left-md relative z-10 flex w-full grow flex-col rounded-md shadow-md ',
               'animation-entry-app overflow-hidden',
               'bg-grey-0 dark:bg-grey-800',
               'lg:h-full',

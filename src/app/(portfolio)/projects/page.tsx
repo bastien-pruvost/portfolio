@@ -15,10 +15,14 @@ const ProjectsPage = async () => {
   })
 
   return (
-    <div className={cn('scrollbar-custom mt-2 overflow-y-scroll pb-6')}>
+    <div className={cn('scrollbar-custom mt-1 overflow-y-scroll pb-6')}>
       <PageTransition>
         <h2 className={cn('page-title')}>Projets réalisés</h2>
-        <div className={cn('grid grid-cols-fit-48 gap-6 p-5 min-[435px]:grid-cols-fit-72 md:px-8')}>
+        <div
+          className={cn(
+            'grid grid-cols-fit-48 gap-6 p-5 min-[435px]:grid-cols-fit-72 md:gap-8 md:px-8',
+          )}
+        >
           {projects &&
             projects.map(
               (project) => project && <ProjectCard key={project._id} project={project} />,

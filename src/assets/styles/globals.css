@@ -24,15 +24,15 @@
   }
 
   .page-title {
-    @apply text-color-jade relative mt-1 border-b border-b-grey-100 px-5 pb-3 text-xl font-medium dark:border-b-grey-700 md:px-8 md:text-2xl;
+    @apply text-color-base relative mt-1 border-b border-b-grey-100 px-5 pb-3 text-xl font-medium dark:border-b-grey-700 md:px-8 md:text-2xl;
   }
 
   .page-subtitle {
-    @apply text-color-base relative my-0 mb-4 text-lg font-semibold md:text-[1.35rem];
+    @apply text-color-jade relative my-0 mb-4 text-lg font-semibold md:text-[1.35rem];
   }
 
   .paragraph {
-    @apply text-color-light my-0 mb-3 text-sm leading-relaxed md:text-base;
+    @apply text-color-light my-0 mb-3 text-sm leading-relaxed;
   }
 
   .strong {
@@ -44,6 +44,10 @@
 
   .prose-custom {
     @apply prose-p:paragraph prose-strong:strong prose-h3:page-subtitle prose max-w-none;
+  }
+
+  .prose-profile {
+    @apply prose-p:text-color-light prose-strong:strong prose-h3:page-subtitle prose max-w-none prose-p:my-0 prose-p:mb-3 prose-p:text-base prose-p:leading-relaxed;
   }
 
   .bottom-page-link {
@@ -75,7 +79,7 @@
 
   @keyframes page-transition {
     0% {
-      opacity: 0;
+      opacity: 0.05;
       transform: translateY(-35px);
     }
 
@@ -101,30 +105,28 @@
   }
 
   .animation-entry-particles {
-    animation: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both animation-entry-particles;
+    animation: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both animation-entry-particles;
   }
 
   @keyframes animation-entry-app {
     0% {
-      transform: rotateX(70deg);
-      transform-origin: top;
+      transform: translateY(1000px);
       opacity: 0;
     }
     100% {
-      transform: rotateX(0deg);
-      transform-origin: top;
+      transform: translateY(0);
       opacity: 1;
     }
   }
 
   .animation-entry-app {
-    animation: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.7s both animation-entry-app;
+    animation: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s both animation-entry-app;
   }
 
   @keyframes animation-entry-banner {
     0% {
       transform: translateX(110%);
-      opacity: 0;
+      opacity: 0.001;
     }
     100% {
       transform: translateX(0%);
@@ -140,7 +142,7 @@
     0% {
       transform: translateY(-500px);
       animation-timing-function: ease-in;
-      opacity: 0;
+      opacity: 0.001;
     }
     38% {
       transform: translateY(0);

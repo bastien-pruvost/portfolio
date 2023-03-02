@@ -21,7 +21,7 @@ export const ContactInformations = () => {
       setTel(decodedTel.toString('ascii'))
       setTelDisplay(decodedTelDisplay.toString('ascii'))
       setEmail(decodedEmail.toString('ascii'))
-    }, 2000)
+    }, 1000)
   }, [])
 
   return (
@@ -34,7 +34,7 @@ export const ContactInformations = () => {
           </a>
         )}
       </div>
-      <div className={cn('mb-2')}>
+      <div className={cn('mb-4')}>
         <span className={cn('text-color-light')}>Téléphone : </span>
         {telDisplay && tel && (
           <a href={`tel:+33${tel}`}>

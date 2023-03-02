@@ -357,8 +357,8 @@ export const BackgroundParticles = () => {
                 width: 1920,
                 height: 1080,
               },
-              limit: 300,
-              value: 160,
+              limit: 250,
+              value: 130,
             },
             opacity: {
               random: {

@@ -11,7 +11,7 @@ export const SkillTechno = ({ techno }: SkillTechnoProps) => {
     <div
       className={cn(
         'flex w-full flex-col items-center justify-center gap-2 rounded-[5px] border py-3 px-4 shadow-sm md:gap-3',
-        'border-grey-25 bg-white dark:border-grey-700 dark:bg-grey-700',
+        'border-grey-50 bg-white dark:border-grey-700 dark:bg-grey-700',
       )}
     >
       <div className={cn('relative h-8 w-8')}>

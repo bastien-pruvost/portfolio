@@ -21,7 +21,7 @@ const SkillsPage = async () => {
   })
 
   return (
-    <div className={cn('scrollbar-custom mt-2 overflow-y-scroll pb-6')}>
+    <div className={cn('scrollbar-custom mt-1 overflow-y-scroll pb-6')}>
       <PageTransition>
         <h2 className={cn('page-title')}>Mes compétences</h2>
         <div
