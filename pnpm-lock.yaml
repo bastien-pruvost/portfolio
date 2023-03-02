@@ -26,7 +26,7 @@ specifiers:
   next-sanity: ^4.1.5
   next-themes: ^0.2.1
   prettier: ^2.8.4
-  prettier-plugin-tailwindcss: ^0.2.3
+  prettier-plugin-tailwindcss: ^0.2.4
   react: 18.2.0
   react-dom: 18.2.0
   react-icons: ^4.7.1
@@ -2187,7 +2187,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001458
-      electron-to-chromium: 1.4.315
+      electron-to-chromium: 1.4.316
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
 
@@ -2809,8 +2809,8 @@ packages:
       stream-shift: 1.0.1
     dev: false
 
-  /electron-to-chromium/1.4.315:
-    resolution: {integrity: sha512-ndBQYz3Eyy3rASjjQ9poMJGoAlsZ/aZnq6GBsGL4w/4sWIAwiUHVSsMuADbxa8WJw7pZ0oxLpGbtoDt4vRTdCg==}
+  /electron-to-chromium/1.4.316:
+    resolution: {integrity: sha512-9urqVpdeJYAwVL/sBjsX2pSlgYI/b4nOqC6UaNa0xlq1VUbXLRhERWlxcQ4FWfUOQQxSSxN/taFtapEcwg5tVA==}
 
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -4397,8 +4397,8 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /lilconfig/2.0.6:
-    resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
+  /lilconfig/2.1.0:
+    resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
     dev: true
 
@@ -5125,7 +5125,7 @@ packages:
       ts-node:
         optional: true
     dependencies:
-      lilconfig: 2.0.6
+      lilconfig: 2.1.0
       postcss: 8.4.21
       yaml: 1.10.2
     dev: true
@@ -6256,7 +6256,7 @@ packages:
       fast-glob: 3.2.12
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      lilconfig: 2.0.6
+      lilconfig: 2.1.0
       micromatch: 4.0.5
       normalize-path: 3.0.0
       object-hash: 3.0.0
