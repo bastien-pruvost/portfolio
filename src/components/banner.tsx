@@ -33,10 +33,11 @@ export const Banner = ({ pageDetails }: BannerProps) => {
     <header
       ref={containerRef}
       className={cn(
-        'transition-margin animation-entry-banner relative w-full rounded-md text-center',
+        // 'animation-entry-banner',
+        'transition-margin relative w-full rounded-md text-center',
         'bg-grey-0 shadow-md dark:bg-grey-800',
         isBannerOpen ? 'mt-16' : 'mt-8',
-        ' lg:-mr-11 lg:max-w-sm lg:pr-8',
+        ' lg:-mr-11 lg:max-w-xs lg:pr-8',
       )}
     >
       <DarkThemeButton
@@ -70,7 +71,8 @@ export const Banner = ({ pageDetails }: BannerProps) => {
       <div className={cn('px-5')}>
         <BannerProfilePic
           className={cn(
-            'transition-image animation-entry-profile-pic mx-auto rounded-full shadow-md',
+            // 'animation-entry-profile-pic',
+            'transition-image mx-auto rounded-full shadow-md',
             'border-white dark:border-grey-700',
             isBannerOpen
               ? '-mt-16 mb-6 h-32 w-32 border-[5px]'
@@ -90,7 +92,7 @@ export const Banner = ({ pageDetails }: BannerProps) => {
           {pageDetails.fullName}
         </h1>
 
-        <p
+        <h2
           className={cn(
             'text-color-jade transition-text-size font-medium',
             isBannerOpen ? 'mb-2 text-base' : 'mb-4 text-sm',
@@ -98,7 +100,7 @@ export const Banner = ({ pageDetails }: BannerProps) => {
           )}
         >
           {pageDetails.job}
-        </p>
+        </h2>
       </div>
       <div
         className={cn(

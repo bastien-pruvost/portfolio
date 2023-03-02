@@ -26,7 +26,7 @@ export const BannerLinks = ({ className, resume }: BannerLinksProps) => {
         download='CV_Bastien_PRUVOST_Developpeur_Web'
         target='_blank'
       >
-        <span className={cn('text-sm font-medium md:text-base')}>Télécharger mon CV</span>
+        <span className={cn('text-sm font-medium')}>Télécharger mon CV</span>
         <HiOutlineArrowDownOnSquare
           preserveAspectRatio={'xMidYMid slice'}
           className={cn('h-6 w-4')}
@@ -42,7 +42,7 @@ export const BannerLinks = ({ className, resume }: BannerLinksProps) => {
         ])}
         href='/contact'
       >
-        <span className={cn('text-sm font-medium md:text-base')}>Me contacter</span>
+        <span className={cn('text-sm font-medium')}>Me contacter</span>
         <HiOutlineChatBubbleOvalLeftEllipsis
           preserveAspectRatio={'xMidYMid slice'}
           className={cn('h-6 w-5')}

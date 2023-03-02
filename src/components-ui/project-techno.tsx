@@ -11,18 +11,19 @@ export const ProjectTechno = ({ techno }: ProjectTechnoProps) => {
   return (
     <div
       className={cn(
-        'flex w-fit items-center justify-start gap-2 rounded-[4px] py-1 px-1.5 shadow-sm',
-        'border border-grey-50 bg-white shadow-sm dark:border-grey-700 dark:bg-grey-700',
+        'rounded-full py-1 px-2 shadow-sm',
+        'flex items-center gap-2',
+        'border border-grey-50 bg-white dark:border-grey-700 dark:bg-grey-700',
       )}
     >
       <Image
-        className={cn('block h-4 w-4 object-contain')}
+        className={cn('h-4 w-4 rounded-full object-contain')}
         src={`/assets/icons/dev-icons/${techno.iconName}.svg`}
         alt={`Logo ${techno.title}`}
         width={64}
         height={64}
       />
-      <p className={cn('text-xs font-medium md:text-sm')}>{techno.title}</p>
+      <p className={cn('text-xs font-normal')}>{techno.title}</p>
     </div>
   )
 }

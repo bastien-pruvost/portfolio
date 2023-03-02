@@ -1,24 +1,28 @@
 import { cn } from '@/lib/utils/classname'
-import { PageTransition } from '@/components-ui/page-transition'
 import { ContactInformations } from '@/components/contact-informations'
 import { ContactForm } from '@/components/contact-form'
+import { PageLayout } from '@/components-ui/page-layout'
+import { pageDetailsQuery } from '@/lib/sanity/queries/page-details'
+import type { PageDetails } from '@/types/sanity-models/page-details'
+import { sanityClientFetch } from '@/lib/sanity/sanity.client'
+import { Wrapper } from '@/components-ui/wrapper'
 
-const ContactPage = () => {
+const ContactPage = async () => {
+  const pageDetails = await sanityClientFetch<PageDetails>(pageDetailsQuery)
+
   return (
-    <div className={cn('scrollbar-custom mt-2 overflow-y-scroll text-base')}>
-      <PageTransition>
-        <h2 className={cn('page-title')}>Me contacter</h2>
-        <div className={cn('gap-6 p-5 md:px-8')}>
-          <h3 className={cn('text-color-light mb-4 text-base leading-relaxed')}>
+    <PageLayout title={pageDetails.contactTitle}>
+      <Wrapper>
+        <div className={cn('my-4 flex flex-col gap-6')}>
+          <h4>
             Pour en savoir plus, ou pour discuter de vos projets, n&apos;hésitez pas à me contacter
             :
-          </h3>
+          </h4>
           <ContactInformations />
-          {/* <p className={cn('mb-4')}>Formulaire de contact :</p> */}
           <ContactForm />
         </div>
-      </PageTransition>
-    </div>
+      </Wrapper>
+    </PageLayout>
   )
 }
 

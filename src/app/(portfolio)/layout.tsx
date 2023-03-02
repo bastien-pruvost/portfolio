@@ -30,7 +30,7 @@ export const metadata = {
 }
 
 const poppins = Poppins({
-  weight: ['400', '500', '600'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
 })
@@ -52,9 +52,9 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
         <BackgroundParticles />
         <div
           className={cn(
-            'h-full w-full p-4 md:p-8 lg:px-16 lg:py-16',
+            'relative h-full w-full p-4 lg:p-8',
             'flex flex-col items-center justify-start gap-3 lg:flex-row lg:items-center ',
-            'lg:max-h-[52rem] lg:min-h-[626px] lg:max-w-[88rem]',
+            'lg:max-h-[50rem] lg:max-w-[88rem]',
           )}
         >
           <Banner pageDetails={pageDetails} />
@@ -62,7 +62,7 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
             className={cn(
               'dark:shadow-left-md relative z-10 w-full overflow-hidden rounded-md shadow-md lg:h-full',
               'flex grow flex-col',
-              'animation-entry-app ',
+              // 'animation-entry-app ',
               'bg-grey-0 dark:bg-grey-800',
             )}
           >

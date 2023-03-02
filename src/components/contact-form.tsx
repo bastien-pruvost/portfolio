@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useState } from 'react'
+import { FormEvent, PropsWithChildren, useState } from 'react'
 import { useReCaptcha } from 'next-recaptcha-v3'
 
 import { cn } from '@/lib/utils/classname'
@@ -14,9 +14,19 @@ type SendedData = {
   reCaptchaToken: string
 }
 
+const Label = ({ htmlFor, children }: PropsWithChildren<{ htmlFor: string }>) => {
+  return (
+    <label htmlFor='fullname' className={cn('text-color-light mb-1.5 ml-0.5')}>
+      {children}
+    </label>
+  )
+}
+
+const inputStyle = 'rounded-[5px] bg-grey-50 px-3 py-2 dark:bg-grey-700 mb-4'
+
 export const ContactForm = () => {
-  const [error, setError] = useState('')
-  const [responseMessage, setResponseMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
+  const [successMessage, setSuccessMessage] = useState('')
 
   const { executeRecaptcha } = useReCaptcha()
 
@@ -41,7 +51,7 @@ export const ContactForm = () => {
 
     const form = event.target
     if (!(form instanceof HTMLFormElement)) {
-      setError(`Une erreur est survenue. ${retryMessage}`)
+      setErrorMessage(`Une erreur est survenue. ${retryMessage}`)
       return
     }
 
@@ -55,55 +65,41 @@ export const ContactForm = () => {
     // const resData = await sendMail(data)
 
     if (!resData.success) {
-      setError(`${resData.message} ${retryMessage}`)
+      setErrorMessage(`${resData.message} ${retryMessage}`)
       return
     }
-    setError('')
+    setErrorMessage('')
     form.reset()
-    setResponseMessage(resData.message)
+    setSuccessMessage(resData.message)
   }
 
   return (
     <RecaptchaProvider>
       <form onSubmit={handleSubmit} className={cn('flex flex-col')}>
-        <label htmlFor='fullname' className={cn('text-color-light mb-1.5 ml-0.5 text-sm')}>
-          Votre nom :
-        </label>
-        <input
-          type='text'
-          name='fullname'
-          className={cn('mb-4 rounded-[5px] bg-grey-50 px-3 py-2 dark:bg-grey-700')}
-          required
-        />
+        <Label htmlFor='fullName'>Votre nom :</Label>
+        <input type='text' name='fullname' className={cn(inputStyle)} required />
 
-        <label htmlFor='email' className={cn('text-color-light mb-1.5 ml-0.5 text-sm')}>
-          Votre email :
-        </label>
-        <input
-          type='email'
-          name='email'
-          className={cn('mb-4 rounded-[5px] bg-grey-50 px-3 py-2 dark:bg-grey-700')}
-          required
-        />
+        <Label htmlFor='email'>Votre email :</Label>
+        <input type='email' name='email' className={cn(inputStyle)} required />
 
-        <label htmlFor='message' className={cn('text-color-light mb-1.5 ml-0.5 text-sm')}>
-          Votre message :
-        </label>
+        <Label htmlFor='message'>Votre message :</Label>
         <textarea
           name='message'
-          className={cn(
-            'mb-6 h-28 resize-none rounded-[5px] bg-grey-50 px-3 py-2 dark:bg-grey-700',
-          )}
+          className={cn(inputStyle, 'h-28 resize-none')}
           required
           onInput={adjustTextareaHeight}
         />
 
-        {error && <p className={cn('mb-4 text-red-800 dark:text-red-300')}>{error}</p>}
-        {responseMessage && <p className={cn('text-color-jade mb-4')}>{responseMessage}</p>}
+        {errorMessage && (
+          <p className={cn('mb-4 text-red-800 dark:text-red-300')}>{errorMessage}</p>
+        )}
+        {successMessage && <p className={cn('text-color-jade mb-4')}>{successMessage}</p>}
 
         <button
           className={cn(
-            'transition-bg-color rounded-[5px] bg-jade-700 py-2 font-semibold text-grey-50 hover:bg-jade-600 dark:bg-jade-500 dark:text-grey-800 hover:dark:bg-jade-400',
+            'rounded-[5px] py-2',
+            'font-semibold text-grey-50 dark:text-grey-800',
+            'transition-bg-color bg-jade-700  hover:bg-jade-600 dark:bg-jade-500 hover:dark:bg-jade-400',
           )}
         >
           Envoyer

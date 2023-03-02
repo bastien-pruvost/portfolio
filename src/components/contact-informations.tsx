@@ -20,29 +20,30 @@ export const ContactInformations = () => {
       setTel(decodedTel.toString('ascii'))
       setTelDisplay(decodedTelDisplay.toString('ascii'))
       setEmail(decodedEmail.toString('ascii'))
-    }, 1000)
+    }, 500)
   }, [])
 
   return (
-    <>
-      <div className={cn('mb-2')}>
+    <div>
+      <div className={cn('mb-3')}>
         <span className={cn('text-color-light')}>Email : </span>
         {email && (
-          <a href={`mailto:${email}`}>
-            <strong className={cn('text-color-jade animation-entry-confidentials')}>{email}</strong>
+          <a
+            href={`mailto:${email}`}
+            className={cn('text-color-jade animation-entry-confidentials')}
+          >
+            {email}
           </a>
         )}
       </div>
-      <div className={cn('mb-6')}>
+      <div className={cn('')}>
         <span className={cn('text-color-light')}>Téléphone : </span>
         {telDisplay && tel && (
-          <a href={`tel:+33${tel}`}>
-            <strong className={cn('text-color-jade animation-entry-confidentials')}>
-              {telDisplay}
-            </strong>
+          <a href={`tel:+33${tel}`} className={cn('text-color-jade animation-entry-confidentials')}>
+            {telDisplay}
           </a>
         )}
       </div>
-    </>
+    </div>
   )
 }
