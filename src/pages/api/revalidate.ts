@@ -8,7 +8,7 @@ const handler = async (request: NextApiRequest, response: NextApiResponse) => {
   }
 
   try {
-    await response.revalidate('/profile')
+    await response.revalidate('/')
     return response.status(200).json({
       success: true,
       revalidated: true,
