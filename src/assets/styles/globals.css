@@ -33,7 +33,7 @@
 
   .bold {
     display: contents;
-    @apply text-color-base font-bold;
+    @apply text-color-base font-semibold;
   }
 
   /* PROSE Profile */

@@ -16,7 +16,7 @@ const ProfilePage = async () => {
     <PageLayout title={pageDetails.profileTitle}>
       <Wrapper>
         <div
-          className={cn('mt-2 flex flex-wrap items-start justify-center gap-4 sm:gap-2 lg:mt-4')}
+          className={cn('mt-2 flex flex-wrap items-start justify-center gap-4 sm:gap-8 lg:mt-4')}
         >
           <ProfilePic
             className={cn(
