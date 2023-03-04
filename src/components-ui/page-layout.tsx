@@ -13,7 +13,9 @@ export const PageLayout = ({ children, title }: PageLayoutProps) => {
       <PageTransition>
         <div className={cn('border-b border-grey-100 dark:border-grey-700')}>
           <Wrapper>
-            <h3 className={cn('text-color-base py-3 text-base font-semibold lg:text-lg')}>
+            <h3
+              className={cn('text-color-base py-3 text-center text-base font-semibold lg:text-lg')}
+            >
               {title}
             </h3>
           </Wrapper>

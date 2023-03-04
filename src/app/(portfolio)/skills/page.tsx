@@ -18,7 +18,7 @@ const SkillsPage = async () => {
 
   return (
     <PageLayout title={pageDetails.skillsTitle}>
-      <div className={cn('grid grid-cols-1 md:grid-cols-2')}>
+      <div className={cn('grid grid-cols-1 min-[810px]:grid-cols-2')}>
         {skills && skills.map((skill) => skill && <SkillSection key={skill._id} skill={skill} />)}
       </div>
     </PageLayout>

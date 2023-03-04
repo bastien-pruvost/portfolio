@@ -22,8 +22,8 @@ const ProjectsPage = async () => {
       <Wrapper>
         <div
           className={cn(
-            'my-4 grid gap-4 lg:gap-4',
-            'min-[540px]:grid-cols-2 min-[800px]:grid-cols-3 min-[1024px]:grid-cols-2 min-[1030px]:grid-cols-2 min-[1360px]:grid-cols-3',
+            'my-4 grid gap-4 lg:my-6 lg:gap-6',
+            'min-[540px]:grid-cols-2 min-[800px]:grid-cols-3',
           )}
         >
           {projects &&

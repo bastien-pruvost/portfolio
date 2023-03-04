@@ -16,7 +16,7 @@ export const SkillTechno = ({ techno }: SkillTechnoProps) => {
         'border border-grey-50 bg-white dark:border-grey-700 dark:bg-grey-700',
       )}
     >
-      <div className={cn('relative h-8 w-8')}>
+      <div className={cn('relative h-8 w-8 lg:h-9 lg:w-9')}>
         <Image
           className={cn('h-full w-full object-contain')}
           src={`/assets/icons/dev-icons/${techno.iconName}.svg`}
@@ -25,7 +25,9 @@ export const SkillTechno = ({ techno }: SkillTechnoProps) => {
           fill
         />
       </div>
-      <p className={cn('text-color-light text-xs font-medium lg:text-sm')}>{techno.title}</p>
+      <p className={cn('text-color-light -mb-[2px] text-xs font-medium lg:text-sm')}>
+        {techno.title}
+      </p>
     </div>
   )
 }

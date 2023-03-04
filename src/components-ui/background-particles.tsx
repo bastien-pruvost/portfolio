@@ -117,7 +117,7 @@ export const BackgroundParticles = () => {
                 links: {
                   blink: false,
                   consent: false,
-                  opacity: 0.6,
+                  opacity: 0.5,
                 },
               },
               push: {
@@ -364,11 +364,11 @@ export const BackgroundParticles = () => {
             opacity: {
               random: {
                 enable: true,
-                minimumValue: 0.3,
+                minimumValue: 0.2,
               },
               value: {
-                min: 0.3,
-                max: 0.8,
+                min: 0.2,
+                max: 0.6,
               },
               animation: {
                 count: 0,
@@ -378,7 +378,7 @@ export const BackgroundParticles = () => {
                 sync: false,
                 destroy: 'none',
                 startValue: 'random',
-                minimumValue: 0.3,
+                minimumValue: 0.2,
               },
             },
             reduceDuplicates: true,
@@ -566,7 +566,7 @@ export const BackgroundParticles = () => {
               distance: 120,
               enable: true,
               frequency: 1,
-              opacity: 0.7,
+              opacity: 0.5,
               shadow: {
                 blur: false,
                 color: {

@@ -49,31 +49,35 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           'relative bottom-0 left-0 right-0 flex divide-x border-t border-grey-100 dark:border-grey-700',
         )}
       >
-        <Link
-          href={project.githubLink ?? ''}
-          target={'_blank'}
-          className={cn(
-            'flex w-full items-center justify-center gap-2 py-3 px-4 text-sm',
-            'hover:text-color-jade transition-all-color hover:bg-grey-25 hover:dark:bg-grey-900',
-            'border-grey-100 dark:border-grey-700',
-          )}
-        >
-          <span>Github</span>
-          <BsGithub className={cn('-mt-[1px] h-5 w-5')} />
-        </Link>
+        {project.githubLink && (
+          <Link
+            href={project.githubLink ?? ''}
+            target={'_blank'}
+            className={cn(
+              'flex w-full items-center justify-center gap-2 py-3 px-4 text-sm',
+              'hover:text-color-jade transition-all-color hover:bg-grey-25 hover:dark:bg-grey-900',
+              'border-grey-100 dark:border-grey-700',
+            )}
+          >
+            <span>Github</span>
+            <BsGithub className={cn('-mt-[1px] h-5 w-5')} />
+          </Link>
+        )}
 
-        <Link
-          href={project.websiteLink ?? ''}
-          target={'_blank'}
-          className={cn(
-            'flex w-full items-center justify-center gap-2 py-3 px-4 text-sm',
-            'hover:text-color-jade transition-all-color hover:bg-grey-25 hover:dark:bg-grey-900',
-            'border-grey-100 dark:border-grey-700',
-          )}
-        >
-          <span>Site</span>
-          <BsGlobe2 className={cn('-mt-[1px] h-5 w-5')} />
-        </Link>
+        {project.websiteLink && (
+          <Link
+            href={project.websiteLink ?? ''}
+            target={'_blank'}
+            className={cn(
+              'flex w-full items-center justify-center gap-2 py-3 px-4 text-sm',
+              'hover:text-color-jade transition-all-color hover:bg-grey-25 hover:dark:bg-grey-900',
+              'border-grey-100 dark:border-grey-700',
+            )}
+          >
+            <span>Site</span>
+            <BsGlobe2 className={cn('-mt-[1px] h-5 w-5')} />
+          </Link>
+        )}
       </div>
     </div>
   )

@@ -15,10 +15,12 @@ export const useOutsideClick = (callback: () => unknown) => {
 
     document.addEventListener('mousedown', handleClick)
     document.addEventListener('touchstart', handleClick)
+    document.addEventListener('resize', handleClick)
 
     return () => {
       document.removeEventListener('mousedown', handleClick)
       document.removeEventListener('touchstart', handleClick)
+      document.addEventListener('resize', handleClick)
     }
   }, [callback])
 

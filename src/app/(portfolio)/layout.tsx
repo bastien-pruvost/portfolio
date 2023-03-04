@@ -52,9 +52,9 @@ const HomeLayout = async ({ children }: PropsWithChildren) => {
         <BackgroundParticles />
         <div
           className={cn(
-            'relative h-full w-full p-4 lg:p-8',
-            'flex flex-col items-center justify-start gap-3 lg:flex-row lg:items-center ',
-            'lg:max-h-[50rem] lg:max-w-[88rem]',
+            'relative h-full w-full p-4 md:p-8',
+            'flex flex-col items-center justify-start gap-3 ',
+            'max-w-[68rem] md:static',
           )}
         >
           <Banner pageDetails={pageDetails} />

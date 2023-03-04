@@ -28,7 +28,7 @@
   /* TEXT FORMAT */
 
   .page-subtitle {
-    @apply text-color-jade my-4 text-lg font-bold;
+    @apply text-color-jade my-4 text-xl font-bold;
   }
 
   .bold {
@@ -39,11 +39,11 @@
   /* PROSE Profile */
 
   .prose-profile h4 {
-    @apply page-subtitle lg:text-xl;
+    @apply page-subtitle;
   }
 
   .prose-profile p {
-    @apply text-color-light mb-3 max-w-2xl text-sm lg:text-base;
+    @apply text-color-light mb-3 max-w-2xl text-base;
   }
 
   .prose-profile strong {
@@ -200,41 +200,40 @@
   }
 
   .animation-entry-confidentials {
-    animation: 1s ease-in-out both animation-entry-confidentials;
+    animation: 1s both animation-entry-confidentials;
   }
 
   /* TRANSITIONS */
 
   .transition-text-color {
-    transition: color 0.15s ease-in-out;
+    transition: color 0.15s;
   }
 
   .transition-bg-color {
-    transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.15s;
   }
 
   .transition-all-color {
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    transition: color 0.15s, background-color 0.15s;
   }
 
   .transition-invert-button {
-    transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: transform 0.15s, opacity 0.15s, color 0.15s;
   }
 
   .transition-image {
-    transition: margin 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out,
-      border-width 0.3s ease-in-out;
+    transition: margin 0.3s, width 0.3s, height 0.3s, border-width 0.3s;
   }
 
   .transition-margin {
-    transition: margin 0.3s ease-in-out;
+    transition: margin 0.3s, height 0.3s;
   }
 
   .transition-text-size {
-    transition: font-size 0.3s ease-in-out, margin 0.3s ease-in-out;
+    transition: font-size 0.3s, margin 0.3s;
   }
 
   .transition-banner {
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: max-height 0.3s, opacity 0.3s, padding 0.3s, margin 0.3s, height 0.3s;
   }
 }
