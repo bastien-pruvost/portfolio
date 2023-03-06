@@ -74,38 +74,36 @@ export const ContactForm = () => {
   }
 
   return (
-    <RecaptchaProvider>
-      <form onSubmit={handleSubmit} className={cn('flex flex-col')}>
-        <Label htmlFor='fullname'>Votre nom :</Label>
-        <input type='text' name='fullname' id='fullname' className={cn(inputStyle)} required />
+    // <RecaptchaProvider>
+    <form onSubmit={handleSubmit} className={cn('flex flex-col')}>
+      <Label htmlFor='fullname'>Votre nom :</Label>
+      <input type='text' name='fullname' id='fullname' className={cn(inputStyle)} required />
 
-        <Label htmlFor='email'>Votre email :</Label>
-        <input type='email' name='email' id='email' className={cn(inputStyle)} required />
+      <Label htmlFor='email'>Votre email :</Label>
+      <input type='email' name='email' id='email' className={cn(inputStyle)} required />
 
-        <Label htmlFor='message'>Votre message :</Label>
-        <textarea
-          name='message'
-          id='message'
-          className={cn(inputStyle, 'h-28 resize-none')}
-          required
-          onInput={adjustTextareaHeight}
-        />
+      <Label htmlFor='message'>Votre message :</Label>
+      <textarea
+        name='message'
+        id='message'
+        className={cn(inputStyle, 'h-28 resize-none')}
+        required
+        onInput={adjustTextareaHeight}
+      />
 
-        {errorMessage && (
-          <p className={cn('mb-4 text-red-800 dark:text-red-300')}>{errorMessage}</p>
+      {errorMessage && <p className={cn('mb-4 text-red-800 dark:text-red-300')}>{errorMessage}</p>}
+      {successMessage && <p className={cn('text-color-jade mb-4')}>{successMessage}</p>}
+
+      <button
+        className={cn(
+          'rounded-[5px] py-2',
+          'font-semibold text-grey-50 dark:text-grey-800',
+          'transition-bg-color bg-jade-700  hover:bg-jade-600 dark:bg-jade-500 hover:dark:bg-jade-400',
         )}
-        {successMessage && <p className={cn('text-color-jade mb-4')}>{successMessage}</p>}
-
-        <button
-          className={cn(
-            'rounded-[5px] py-2',
-            'font-semibold text-grey-50 dark:text-grey-800',
-            'transition-bg-color bg-jade-700  hover:bg-jade-600 dark:bg-jade-500 hover:dark:bg-jade-400',
-          )}
-        >
-          Envoyer
-        </button>
-      </form>
-    </RecaptchaProvider>
+      >
+        Envoyer
+      </button>
+    </form>
+    // </RecaptchaProvider>
   )
 }

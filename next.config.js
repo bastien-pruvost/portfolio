@@ -4,7 +4,7 @@
 // const withBundleAnalyzer = require('@next/bundle-analyzer')
 
 const nextConfig = {
-  poweredByHeader: false,
+  // poweredByHeader: false,
   reactStrictMode: false,
   swcMinify: true,
   experimental: {
