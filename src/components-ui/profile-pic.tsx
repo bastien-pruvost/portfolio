@@ -12,20 +12,20 @@ type ProfilePicProps = {
 
 export const ProfilePic = ({ className, profilePic }: ProfilePicProps) => {
   return (
-    <div className={cn(className)}>
-      <Image
-        className={cn('object-contain')}
-        src={profilePic.url}
-        alt='Bastien Pruvost - Développeur Web'
-        quality={100}
-        sizes='208px'
-        // width={250}
-        // height={280}
-        // width={profilePic.metadata.dimensions.width}
-        // height={profilePic.metadata.dimensions.height}
-        fill
-        priority
-      />
-    </div>
+    // <div className={cn(className)}>
+    <Image
+      className={cn(className, 'object-contain')}
+      src={profilePic.url}
+      alt='Bastien Pruvost - Développeur Web'
+      quality={100}
+      sizes='208px'
+      width={208}
+      height={208}
+      // width={profilePic.metadata.dimensions.width}
+      // height={profilePic.metadata.dimensions.height}
+      // fill
+      priority
+    />
+    // </div>
   )
 }

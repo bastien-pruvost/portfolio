@@ -25,7 +25,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         src={project.mainImage.url}
         alt={`Capture d'écran du projet ${project.title}`}
         quality={100}
-        sizes={'208px'}
+        sizes={`100vw, (min-width: 540px) 50vw, (min-width: 800px) 33vw`}
         width={project.mainImage.metadata.dimensions.width}
         height={project.mainImage.metadata.dimensions.height}
       />

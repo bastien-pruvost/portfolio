@@ -92,7 +92,7 @@ export const Banner = ({ pageDetails }: BannerProps) => {
       <DarkThemeButton
         className={cn(
           'hover:text-color-jade transition-invert-button absolute pt-[2px]',
-          'left-4 top-4 md:top-1 md:right-1 md:left-auto min-[1100px]:top-7 min-[1100px]:right-8',
+          'min-[1180px]:top-7 min-[1180px]:right-8 left-4 top-4 md:top-1 md:right-1 md:left-auto',
         )}
       />
 
