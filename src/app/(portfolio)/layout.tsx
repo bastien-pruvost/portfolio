@@ -13,10 +13,26 @@ import type { PropsWithChildren } from 'react'
 import type { PageDetails } from '@/types/sanity-models/page-details'
 
 export const metadata = {
-  title: 'Portfolio Bastien Pruvost',
+  title: 'Portfolio Bastien Pruvost | Développeur Web Front-End',
   description:
-    'Portfolio de Bastien Pruvost. Développeur Web spécialisé dans la création de sites web en Javascript, TypeScript, React, Node.js.',
+    'Portfolio de Bastien Pruvost. Développeur Web Frontend spécialisé dans la création de sites web en Javascript, TypeScript, React et Node.js.',
   creator: 'Bastien Pruvost',
+  openGraph: {
+    locale: 'fr-FR',
+    title: 'Portfolio Bastien Pruvost | Développeur Web Front-End',
+    description:
+      'Portfolio de Bastien Pruvost. Développeur Web Frontend spécialisé dans la création de sites web en Javascript, TypeScript, React et Node.js.',
+    url: 'https://www.pruvostbastien.fr',
+    siteName: 'Portfolio Bastien Pruvost | Développeur Web Front-End',
+    images: [
+      {
+        url: 'https://www.pruvostbastien.fr/og.jpeg',
+        width: 1200,
+        height: 600,
+        alt: 'Portfolio Bastien Pruvost | Développeur web front-end',
+      },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
