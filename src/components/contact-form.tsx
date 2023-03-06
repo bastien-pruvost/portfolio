@@ -16,7 +16,7 @@ type SendedData = {
 
 const Label = ({ htmlFor, children }: PropsWithChildren<{ htmlFor: string }>) => {
   return (
-    <label htmlFor='fullname' className={cn('text-color-light mb-1.5 ml-0.5')}>
+    <label htmlFor={htmlFor} className={cn('text-color-light mb-1.5 ml-0.5')}>
       {children}
     </label>
   )
@@ -76,15 +76,16 @@ export const ContactForm = () => {
   return (
     <RecaptchaProvider>
       <form onSubmit={handleSubmit} className={cn('flex flex-col')}>
-        <Label htmlFor='fullName'>Votre nom :</Label>
-        <input type='text' name='fullname' className={cn(inputStyle)} required />
+        <Label htmlFor='fullname'>Votre nom :</Label>
+        <input type='text' name='fullname' id='fullname' className={cn(inputStyle)} required />
 
         <Label htmlFor='email'>Votre email :</Label>
-        <input type='email' name='email' className={cn(inputStyle)} required />
+        <input type='email' name='email' id='email' className={cn(inputStyle)} required />
 
         <Label htmlFor='message'>Votre message :</Label>
         <textarea
           name='message'
+          id='message'
           className={cn(inputStyle, 'h-28 resize-none')}
           required
           onInput={adjustTextareaHeight}
