@@ -30,7 +30,9 @@ export const ContactInformations = () => {
         {email && (
           <a
             href={`mailto:${email}`}
-            className={cn('text-color-jade animation-entry-confidentials inline-block')}
+            className={cn(
+              'text-color-jade animation-entry-confidentials inline-block hover:underline',
+            )}
           >
             {email}
           </a>
@@ -41,7 +43,9 @@ export const ContactInformations = () => {
         {telDisplay && tel && (
           <a
             href={`tel:${tel}`}
-            className={cn('text-color-jade animation-entry-confidentials -mb-[2px] inline-block')}
+            className={cn(
+              'text-color-jade animation-entry-confidentials -mb-[2px] inline-block hover:underline',
+            )}
           >
             {telDisplay}
           </a>

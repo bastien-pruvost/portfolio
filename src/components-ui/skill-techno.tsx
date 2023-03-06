@@ -25,7 +25,7 @@ export const SkillTechno = ({ techno }: SkillTechnoProps) => {
           fill
         />
       </div>
-      <p className={cn('text-color-light -mb-[2px] text-xs font-medium lg:text-sm')}>
+      <p className={cn('text-color-light -mb-[3px] text-xs font-medium lg:text-sm')}>
         {techno.title}
       </p>
     </div>

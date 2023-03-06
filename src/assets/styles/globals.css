@@ -190,7 +190,7 @@
   @keyframes animation-entry-confidentials {
     0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(10px);
     }
 
     100% {
@@ -200,7 +200,7 @@
   }
 
   .animation-entry-confidentials {
-    animation: 1s both animation-entry-confidentials;
+    animation: 0.5s both animation-entry-confidentials;
   }
 
   /* TRANSITIONS */
