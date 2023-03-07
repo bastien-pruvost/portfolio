@@ -16,7 +16,7 @@ const handler = async (request: NextApiRequest, response: NextApiResponse) => {
     return response.status(200).json({
       success: true,
       revalidated: true,
-      message: `Data successfully revalidated.`,
+      message: `Data successfully revalidated on path: "/${pathToRevalidate}"`,
     })
   } catch (error) {
     return response.status(500).json({
