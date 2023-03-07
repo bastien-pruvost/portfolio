@@ -51,6 +51,8 @@ const poppins = Poppins({
   display: 'swap',
 })
 
+export const revalidate = 604800
+
 const HomeLayout = async ({ children }: PropsWithChildren) => {
   const pageDetails = await sanityClientFetch<PageDetails>(pageDetailsQuery)
 

@@ -1,23 +1,27 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 const handler = async (request: NextApiRequest, response: NextApiResponse) => {
-  console.log(request.query.token)
-
   if (request.query.token !== process.env.REVALIDATION_TOKEN) {
-    return response.status(401).json({ message: 'Token invalide' })
+    return response.status(401).json({ message: 'Invalid token.' })
+  }
+
+  const pathToRevalidate = request.query.path ?? 'profile'
+
+  if (Array.isArray(pathToRevalidate)) {
+    return response.status(400).json({ message: 'Invalid path.' })
   }
 
   try {
-    await response.revalidate('/')
+    await response.revalidate(`/${pathToRevalidate}`)
     return response.status(200).json({
       success: true,
       revalidated: true,
-      message: 'Revalidation des données éfféctuée avec succés',
+      message: `Data successfully revalidated.`,
     })
   } catch (error) {
     return response.status(500).json({
       success: false,
-      message: 'Une erreur est survenu durant la revalidation des données.',
+      message: 'An error occurred during data revalidation.',
       error,
     })
   }
