@@ -9,7 +9,7 @@ import { RecaptchaProvider } from '@/components-providers/recaptcha-provider'
 
 type MailData = { fullName: string; email: string; message: string }
 
-type SendedData = {
+type DataSent = {
   mailData: MailData
   reCaptchaToken: string
 }
@@ -33,7 +33,7 @@ export const ContactForm = () => {
   const retryMessage =
     'Veuillez rafraichir la page et réessayer ou envoyer votre message par mail à contact@pruvostbastien.fr'
 
-  const sendMail = async (data: SendedData) => {
+  const sendMail = async (data: DataSent) => {
     const res = await fetch('/api/mail', {
       method: 'POST',
       body: JSON.stringify({ data }),
