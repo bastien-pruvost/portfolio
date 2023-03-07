@@ -10,7 +10,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
     optimizeCss: true,
-    typedRoutes: true,
+    // typedRoutes: true,
   },
   redirects() {
     return [{ source: '/', destination: '/profile', permanent: true }]
