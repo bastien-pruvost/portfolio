@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 
-const ProfilePage = () => {
+const ProfilePage = async () => {
   redirect('/profile')
 }
 

@@ -4,13 +4,16 @@
 // const withBundleAnalyzer = require('@next/bundle-analyzer')
 
 const nextConfig = {
-  // poweredByHeader: false,
+  poweredByHeader: false,
   reactStrictMode: false,
   swcMinify: true,
   experimental: {
     appDir: true,
-    // optimizeCss: true,
-    // typedRoutes: true,
+    optimizeCss: true,
+    typedRoutes: true,
+  },
+  redirects() {
+    return [{ source: '/', destination: '/profile', permanent: true }]
   },
   images: {
     domains: ['cdn.sanity.io'],
