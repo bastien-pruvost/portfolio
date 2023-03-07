@@ -5,7 +5,7 @@ import type { PropsWithChildren } from 'react'
 
 export const Providers = ({ children }: PropsWithChildren) => {
   return (
-    <ThemeProvider attribute='class' defaultTheme='dark'>
+    <ThemeProvider attribute='class' defaultTheme='system'>
       {children}
       <style jsx global>{`
         .grecaptcha-badge {
