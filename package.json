@@ -2,6 +2,14 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
+  "description": "Bastien Pruvost Portfolio",
+  "keywords": [],
+  "homepage": "https://github.com/bastien-pruvost/portfolio#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Bastien Pruvost",
+    "url": "https://github.com/bastien-pruvost"
+  },
   "scripts": {
     "dev": "rimraf .next && next dev",
     "build": "rimraf .next && next build",
